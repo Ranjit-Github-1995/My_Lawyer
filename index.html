@@ -628,7 +628,7 @@
                 if (!$(e.target).closest('.navbar-collapse').length &&
                     !$(e.target).is('.navbar-collapse') &&
                     menu_opened === true) {
-                    $('.navbar-collapse').collapse('toggle');
+                    $('.navbar-collapse').removeClass('show');
                     $('.navbar-toggler').removeClass('change');
                     $('body').removeClass('_overHidden');
                 }
