@@ -1,0 +1,6223 @@
+/*
+::-moz-selection {
+	background:rgba(0,0,0,0);
+	}
+::selection { 
+	background:rgba(0,0,0,0);
+	} 	
+*/
+	
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham' !important;
+    overflow-x: hidden;
+}
+
+
+
+/* Gotham-Bold */
+@font-face {
+    font-family: 'Gotham-Bold';
+    src:  url('../fonts/Gotham-Bold/Gotham-Bold.woff') format('woff'), url('../fonts/Gotham-Bold/Gotham-Bold.ttf')  format('truetype'), url('../fonts/Gotham-Bold/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Gotham-Black  */
+  @font-face {
+    font-family: 'Gotham-Black';
+    src:  url('../fonts/Gotham-Black/Gotham-Black.otf')  format('opentype'), url() format('woff'), url('../fonts/Gotham-Black/Gotham-Black.ttf')  format('truetype'), url('../fonts/Gotham-Black/Gotham-Black.svg#Gotham-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Gotham-Book  */
+  @font-face {
+    font-family: 'Gotham-Book';
+    src:  url('../fonts/Gotham-Book/Gotham-Book.otf')  format('opentype'), url() format('woff'), url('../fonts/Gotham-Book/Gotham-Book.ttf')  format('truetype'), url('../fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Gotham-Medium';
+    src:  url('../fonts/Gotham-Medium/Gotham-Medium.otf')  format('opentype'),
+     url('../fonts/Gotham-Medium/Gotham-Medium.eot') format('embedded-opentype'),
+           url('../fonts/Gotham-Medium/Gotham-Medium.woff') format('woff'),
+            url('../fonts/Gotham-Medium/Gotham-Medium.ttf')  format('truetype'),
+             url('../fonts/Gotham-Medium/Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ProximaNova-Bold';
+    src:  url('../fonts/ProximaNova-Bold/ProximaNova-Bold.otf')  format('opentype'),
+           url('../fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'),
+            url('../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf')  format('truetype'), 
+            url('../fonts/ProximaNova-Bold/ProximaNova-Bold.svg') format('svg'),
+            url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ProximaNova-Regular';
+    src:  url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+     url('../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf')  format('truetype'),
+      url('../fonts/ProximaNova-Regular/ProximaNova-Regular.svg') format('svg'),
+      url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'FontAwesome5Free-Solid';
+    src:  url('../fonts/FontAwesome5Free-Solid/FontAwesome5Free-Solid.otf')  format('opentype'),
+           url('../fonts/FontAwesome5Free-Solid/FontAwesome5Free-Solid.woff') format('woff'), url('../fonts/FontAwesome5Free-Solid/FontAwesome5Free-Solid.ttf')  format('truetype'), url('../fonts/FontAwesome5Free-Solid/FontAwesome5Free-Solid.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+img, a {
+	border: none;
+	outline: none;
+}
+a {
+	text-decoration: none !important;
+    cursor: pointer !important;
+}
+ul{
+    margin-bottom: 0px !important;
+}
+ul, li {
+	list-style: none;
+}
+input, textarea, select {
+	outline: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px !important;
+}
+h2.center {
+	font-size: 45px;
+	color: #2a2d71;
+	text-align: center;
+	font-family: 'Gotham-Black';
+	margin: 0px auto !important;
+	width: 80%;
+	display: block;
+}
+h6.center_sm{
+    font-size: 17px;
+    color: #f7941d;
+    text-align: center;
+    font-family: 'Gotham-Black';
+    letter-spacing: 8px;
+}
+p {
+	color: #797979;
+	
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+}
+.alignleft {
+	float: left;
+	margin: 0 10px 15px 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0px 15px 10px;
+}
+.aligncenter {
+	display: block;
+	margin: 15px auto;
+}
+.clear:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.spacer10 {
+	height: 10px;
+}
+.spacer15 {
+	height: 15px;
+}
+.spacer20 {
+	height: 20px;
+}
+.spacer25 {
+	height: 25px;
+}
+.spacer30 {
+	height: 30px;
+}
+.spacer40 {
+	height: 40px;
+}
+.boxSizing {
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1170px !important;
+	margin: 0px auto;
+	position: relative;
+}
+.container:after {
+	clear: both;
+	display: block;
+	content: '';
+}
+
+/*========================================
+============ Header Css Begin ===========
+==========================================*/
+        
+._header {
+    padding: 25px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+        
+.logo a {
+    color: #fff;
+}
+        
+ navbar {
+    padding: 0;
+}
+        
+.navbar-toggler-icon {
+    height: auto;
+}       
+.navbar-toggler-icon:focus,
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+        
+.navbar-toggler-icon .bar {
+    height: 3px;
+    width: 30px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+        
+.navbar-toggler-icon .bar:last-child {
+    margin-bottom: 0;
+}
+        
+.change .bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+        
+.change .bar-2 {
+    opacity: 0;
+}
+        
+.change .bar-3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -7px);
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+        
+._mob-menu-hdr {
+    display: block;
+    padding: 10px 15px;
+    background: #23266c;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+        
+.navbar-collapse {
+    position: fixed;
+    background: #2a2d71;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 2;
+    display: block;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+}
+        
+.navbar-collapse.show {
+    transform: translateX(0%);
+}
+        
+.clickD {
+    background: url(images/down-arrow-white.png) no-repeat;
+    right: 30px;
+    background-size: 15px;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    top: 8px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+        
+.navbar .navbar-nav>li .clickD.toggled {
+    transform: rotate(180deg);
+}
+.left_nav{
+    margin-left: 58px !important;
+}
+        
+.sub-menu {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+}
+        
+.sub-menu li a {
+    display: block;
+}
+        
+.sub-menu li:not(:last-child) a {
+    border-bottom: 1px dashed #ffffff5e;
+}
+        
+.clickD.toggled~.sub-menu,
+.toggled .sub-menu {
+    display: block;
+    top: 0;
+    background: #1750bb;
+}
+        
+._overHidden {
+    overflow: hidden;
+}
+        
+.navbar .navbar-nav>li {
+    padding: 0;
+    position: relative;
+    border-bottom: 1px dashed #ffffff5e;
+}
+        
+.navbar li a {
+    color: #fff;
+    display: block;
+    padding: 12px 15px;
+    font-family: 'Gotham-Bold';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+}
+.navbar li a.active{
+    color: #f7941d;
+}
+.navbar li a:hover{
+    color: #f7941d;
+}
+        
+.navbar-toggler {
+    padding: 0;
+}
+.navbar{
+    padding: 0px !important;
+}
+.navbar-brand{
+    padding: 0px !important;
+}
+.top_nav{
+    margin-top: -40px;
+}
+.logo img{
+    width: 100%;
+}
+.collapse ul .login{
+    float: right;
+    padding-left: 130px;
+}
+.login ul li{
+    margin-right: 10px;
+}
+.login ul li:last-child{
+    margin-right: 0px;
+}
+.login ul li:last-child a{
+    border: 2px solid #f7941d !important;
+    color: #f7941d;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    width: 122px;
+}
+.login ul li{
+    float: left;
+}
+.login ul li a {
+	text-decoration: none;
+	text-align: center;
+	border: 2px solid #4c50a1;
+	padding: 10px 35px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.login ul li a:hover{
+    color: #fff ;
+}
+.login ul li:last-child a:hover{
+    color: #f7941d ;
+}
+.collapse:not(.show) {
+	display: block !important;
+}
+        
+@media (min-width: 992px) {
+._mob-menu-hdr {
+    display: none;
+}
+.navbar-collapse {
+    position: unset;
+    transform: translate(0);
+    background: transparent;
+    border: none;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar .navbar-nav>li {
+    border: none;
+}
+.navbar-toggler {
+    display: none;
+}
+.navbar li.menu-item-has-children a {
+    padding-right: 30px;
+}
+.clickD {
+    right: 0;
+    background-size: 12px;
+}
+.sub-menu {
+    position: absolute;
+    display: block;
+    width: 200px;
+    background: #fff;
+    box-shadow: -7.794px 4.5px 20px rgba(17, 79, 160, 0.17);
+    top: 110%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.sub-menu li {
+    list-style: none;
+}
+.sub-menu li a {
+    color: #000;
+}
+.menu-item-has-children .clickD.toggled ~ .sub-menu {
+    display: block;
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    background: #fff;
+}
+._header._menu_fixed {
+    position: fied;
+    z-index: 9999 !important;
+    width: 100%;
+    background-color: ;
+    top: 0;
+}
+    
+}
+@media (min-width: 1025px){
+.sub-menu {
+    position: absolute;
+    display: block;
+    width: 200px;
+    background: #fff;
+    box-shadow: -7.794px 4.5px 20px rgba(17, 79, 160, 0.17);
+    top: 110%;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+.sub-menu li {
+    list-style: none;
+}
+.sub-menu li a {
+    color: #000;
+}
+.menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+    
+}
+/*========================================
+============ Header Css End  ===========
+==========================================*/
+
+
+/*** banner sec start ***/
+
+.banner{
+    width: auto;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: auto;
+    margin-top: -125px;
+}
+.banner .banner_cap{
+    overflow: hidden;
+}
+.banner .banner_cap .outer_banner_pho {
+	float: right;
+	width: 58%;
+	overflow: hidden;
+	margin-top: 117px;
+}
+.banner .banner_cap .outer_banner_pho img{
+    width: 96%;
+}
+.banner .banner_cap .left_side_con{
+    overflow: hidden;
+}
+
+.banner .banner_cap .left_side_con h1{
+    padding-top: 200px;
+    font-size: 65px;
+    color: #fff;
+    line-height: 62px;
+    text-align: left;
+    width: 91%;
+    font-family: 'Gotham-Black';
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+}
+.banner .banner_cap .left_side_con h1 span{
+    color: #f7941d;
+}
+.banner .banner_cap .left_side_con p{
+    font-size: 25px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 48px;
+    font-family: 'Gotham-Medium';
+}
+.banner .banner_cap .left_side_con a {
+	font-size: 16px;
+	color: #31295e;
+	text-align: center;
+	padding: 20.5px 85px;
+	background-color: #f7941d;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: table;
+    transition: all ease 1000ms 0s;
+    margin-bottom: 175px;
+    font-family: 'Gotham-Black';
+    letter-spacing: 2px;
+}
+.banner .banner_cap a:hover{
+    transform: scale(1.1);
+}
+.banner .banner_cap .banner_over_pic{
+    overflow: hidden;
+}
+
+/*** banner sec end ***/
+
+/*** legalfirms sec start ***/
+
+.legal{
+    padding-top: 70px;
+}
+.legal .effect_one{
+    position: relative;
+}
+.legal .effect_two{
+    position: relative;
+}
+.legal .effect_three{
+    position: relative;
+}
+.legal .legal_3box .legal_box{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,47357b+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #2a2d71 0%, #47357b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #2a2d71 0%,#47357b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #2a2d71 0%,#47357b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#47357b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin-top: -113px;
+
+}
+.legal .legal_3box .for_lawyer{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7941d+0,f77f25+99 */
+    background: #f7941d; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #f7941d 0%, #f77f25 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #f7941d 0%,#f77f25 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #f7941d 0%,#f77f25 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7941d', endColorstr='#f77f25',GradientType=1 ); /* IE6-9 fallback on   horizontal gradient */
+
+}
+.legal .legal_3box .clnt{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3ec594+0,3eb2bc+99 */
+    background: #3ec594; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #3ec594 0%, #3eb2bc 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #3ec594 0%,#3eb2bc 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #3ec594 0%,#3eb2bc 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ec594', endColorstr='#3eb2bc',GradientType=1 ); /* IE6-9 fallback on   horizontal gradient */
+
+}
+.legal .legal_3box .legal_box .legal_bg{
+    background-image: url(../images/Legalfirms_box_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 345px;
+}
+.legal .legal_3box .legal_box .legal_bg.law{
+    background-image: url(../images/lawyer_bg.png);
+}
+.legal .legal_3box .legal_box .legal_bg.cli_bg{
+    background-image: url(../images/clints_bg.png);
+}
+.legal .legal_3box img{
+    margin: 0px auto;
+    display: block;
+}
+.legal .legal_3box .legal_box .legal_bg h5{
+    font-size: 20px;
+    color: #9da0e4;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 145px;
+    font-family: 'Gotham-Black';
+}
+.legal .legal_3box .legal_box .legal_bg .leg_box{
+    color: #fff;
+}
+.legal .effect_one::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_one.png);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    left: 29%;
+    top: 45%;
+}
+.legal .effect_one::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_one.png);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    right: 29%;
+    top: 45%;
+}
+.legal .effect_two::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_two.png);
+    background-repeat: no-repeat;
+    height: 1px;
+    width: 33px;
+    left: 29%;
+    top: 45%;
+}
+.legal .effect_two::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_two.png);
+    background-repeat: no-repeat;
+    height: 1px;
+    width: 33px;
+    right: 29%;
+    top: 45%;
+}
+.legal .effect_three::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_three.png);
+    background-repeat: no-repeat;
+    height: 1px;
+    width: 33px;
+    left: 29%;
+    top: 45%;
+}
+.legal .effect_three::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/Legalfirms3_box_border_three.png);
+    height: 1px;
+    width: 33px;
+    right: 29%;
+    top: 45%;
+}
+
+.legal .legal_3box .legal_box .legal_bg h4{
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    margin-bottom: 0px;
+}
+.legal .legal_3box .legal_box .legal_bg p{
+    font-size: 20px;
+    color: #9497dc;
+    text-align: center;
+    padding-bottom: 50px;
+    font-family: 'Gotham-Book';
+}
+.legal .legal_3box a {
+	width: 79px;
+	height: 79px;
+	margin: 0px auto;
+	display: block;
+	background: #48357b;
+	background: -moz-linear-gradient(left, #48357b 0%, #2a2d71 99%);
+	background: -webkit-linear-gradient(left, #48357b 0%,#2a2d71 99%);
+	background: linear-gradient(to right, #48357b 0%,#2a2d71 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48357b', endColorstr='#2a2d71',GradientType=1 );
+	box-shadow: -webkit-box-shadow: 0px 22px 5px 0px rgba(76,76,76,0.29);
+	-moz-box-shadow: 0px 22px 5px 0px rgba(76,76,76,0.29);
+	box-shadow: 5px 5px 25px 0px rgba(76,76,76,0.29);
+	border: 4px solid #fff;
+	border-radius: 50%;
+	margin-top: -40px;
+}
+.legal .legal_3box a img{
+    padding: 30px;
+    text-align: center;
+}
+.legal .legal_3box a.yellow{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f77a1d+0,f7941d+99 */
+    background: #f77a1d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #f77a1d 0%, #f7941d 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #f77a1d 0%,#f7941d 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #f77a1d 0%,#f7941d 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f77a1d', endColorstr='#f7941d',GradientType=1 ); /* IE6-9 */
+}
+.legal .legal_3box a.sky{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3eb1bc+0,3ec594+99 */
+    background: #3eb1bc; /* Old browsers */
+    background: -moz-linear-gradient(left,  #3eb1bc 0%, #3ec594 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #3eb1bc 0%,#3ec594 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #3eb1bc 0%,#3ec594 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eb1bc', endColorstr='#3ec594',GradientType=1 ); /* IE6-9 */
+}
+
+/*** legalfirms sec end ***/
+
+/*** feature sec start ***/
+
+.feature{
+    margin-top: 100px;
+    background-image: url(../images/feature_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 1028px;
+    overflow: hidden;
+    position: relative;
+}
+.feature h6{
+    padding-top: 90px;
+    padding-bottom: 28px;
+    text-transform: uppercase;
+}
+.feature h2{
+    padding-bottom: 70px;
+}
+.big_image_tab{
+    padding-right: 0px;
+    margin-right: 77px;
+    max-width: 566px !important;
+}
+.no_padding{
+    padding-left: 0px;
+}
+
+
+
+/* Style the buttons inside the tab */
+
+.tab {
+    width: 100%;
+}
+.tab button {
+    display: block;
+    padding: 30px 30px 30px 40px;
+    width: 100%;
+    border: none;
+    outline: none !important;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    background-color: #fff;
+    margin-bottom: 18px;
+}
+.tab button:last-child{
+    margin-bottom: 0px;
+}
+.feature .tab h4{
+    font-size: 36px;
+    color: #2a2d71;
+    text-align: left;
+    font-weight: 500;
+    padding-bottom: 33px;
+    font-family: 'Gotham-Medium';
+}
+.feature .tab button h5{
+    font-size: 20px;
+    color: #353a41;
+    font-family: 'Gotham-Black';
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}
+.feature .tab button p{
+    font-size: 17px;
+    color: #5d5d5d;
+    line-height: 27px;
+    text-align: left;
+    margin: 0px;
+    font-family: 'Gotham-Book';
+    margin-top: -5px !important;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #f7941d;
+}
+.feature .tab button:hover h5{
+    color: #fff !important;
+}
+.feature .tab button:hover p{
+    color: #fff !important;
+}
+.feature .tab button a{
+    text-decoration: none;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color: #fff;
+    
+}
+
+/* Style the tab content */
+.tabcontent {
+    overflow: hidden;
+}
+.tabcontent img{
+    width: 100%;
+    margin-bottom: 28%;
+    padding-top: 5px;
+}
+
+.tabcontent_two {
+    overflow: hidden;
+}
+.tabcontent_two img{
+    width: 100%;
+    height: 582px;
+    margin-bottom: 28%;
+}
+
+.tabcontent_three {
+    overflow: hidden;
+}
+.tabcontent_three img{
+    width: 100%;
+    height: 582px;
+    margin-bottom: 28%;
+}
+
+.feature .slick-prev{
+    display: none !important;
+}
+.feature .slick-next{
+    display: none !important;
+}
+.feature .slick-dots li {
+	display: block;
+	margin-bottom: 60px;
+	border: 3px solid #2a2d71;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+    
+}
+.feature .slick-dots li button {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin: 0px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	border-radius: 50%;
+}
+.feature .slick-dots li.slick-active button{
+    margin: 3px;
+    background: #f7941d ;
+}
+
+.feature .slick-dots li button::before{
+    content: "";
+}
+.feature .slick-dots li button h3::after{
+    position: absolute;
+    content: "";
+    font-size: 13px;
+    color: #777777;
+    font-family: 'Gotham-Bold';
+    top: 5px;
+    left: 0;
+}
+.feature .slick-dots {
+	left: -4%;
+	bottom: 50% !important;
+	width: 3%;
+	position: sticky;
+	margin-left: -9%;
+	margin-top: 5%;
+}
+.feature .slick-dots li::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/tabs_slider_arrow.png);
+    background-repeat: no-repeat;
+    width: 2px;
+    height: 41px;
+    margin-top: 65%;
+}
+.feature .slick-dots li:last-child::after{
+    background-image: none;
+}
+.feature span.le {
+	font-size: 11px;
+	color: #777777;
+	text-align: left;
+	font-weight: 700;
+	text-transform: uppercase;
+	position: absolute;
+	top: 25%;
+	left: -2%;
+    display: none !important;
+}
+.feature span.le:hover{
+    color: #2a2d71;
+}
+.feature span.le.lw{
+    top: 32%;
+}
+.feature span.lw.clieN{
+    top: 39%;
+}
+
+.feature span.le{
+    display: none;
+}
+.feature .slick-dots li button:after {
+    position: absolute;
+    content: "Legalfirms";
+    height: 30px;
+    width: 200px;
+    font-size: 11px;
+    color: #777777;
+    text-align: left;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: 100%;
+    top: -5px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Gotham-Bold';
+}
+.feature .slick-dots li:nth-child(2) button:after{
+    content: "Lawyers";
+}
+.feature .slick-dots li:nth-child(3) button:after{
+    content: "Clients";
+}
+.feature .slick-dots li.slick-active  button:after{
+    color: #2a2d71;
+}
+
+
+
+
+/*** feature sec end ***/
+
+/*** serving sec start ***/
+
+.serving{
+    overflow: hidden;
+    padding-top: 67px;
+}
+.serving h6{
+    padding-bottom: 28px;
+    text-transform: uppercase;
+}
+.serving h2{
+    padding-bottom: 44px;
+}
+.serving .serving_det {
+	background: -webkit-box-shadow: -1px 5px 8px 10px rgba(221,221,221,0.44);
+	-moz-box-shadow: -1px 5px 8px 10px rgba(221,221,221,0.44);
+	box-shadow: -1px -2px 18px 12px rgba(221,221,221,0.44);
+	height: 439px;
+	margin-bottom: 0px;
+}
+.serving .blog_post {
+	overflow: hidden;
+	position: relative;
+	height: 350px;
+    
+}
+
+.serving .blog_post img {
+	width: 100%;
+	height: auto;
+}
+
+.serving .blo_icon {
+	margin: 0px auto;
+	text-align: center;
+	position: absolute;
+	content: "";
+	top: 57%;
+	left: 35%;
+}
+.serving .blog_det {
+	padding-top: 30px;
+	overflow: hidden;
+	text-align: center;
+	padding-bottom: 34px;
+	margin-top: -57px;
+}
+.serving p {
+	font-size: 16px;
+	color: #f7941d;
+	padding-bottom: 2px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+    font-family: 'Gotham-Bold';
+}
+.serving h3 {
+	color: #2a2d71;
+	font-size: 30px;
+	font-family: 'Gotham-Black';
+	padding-bottom: 34px;
+}
+.serving a {
+	width: 59px;
+	height: 59px;
+	margin: 0px auto;
+	display: block;
+	background: #48357b;
+	background: -moz-linear-gradient(left, #48357b 0%, #2a2d71 99%);
+	background: -webkit-linear-gradient(left, #48357b 0%,#2a2d71 99%);
+	background: linear-gradient(to right, #48357b 0%,#2a2d71 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48357b', endColorstr='#2a2d71',GradientType=1 );
+	box-shadow: -webkit-box-shadow: 0px 22px 5px 0px rgba(76,76,76,0.29);
+	-moz-box-shadow: 0px 22px 5px 0px rgba(76,76,76,0.29);
+	box-shadow: 5px 5px 25px 0px rgba(76,76,76,0.29);
+	border: none !important;
+	border-radius: 50%;
+	margin-top: -34px;
+    margin-bottom: 10px;
+}
+.serving a img {
+	text-align: center;
+	padding: 23px;
+}
+/*** serving sec end ***/
+
+/*** testmonial sec start ***/
+
+.test_m{
+    overflow: hidden;
+    background-image: url(../images/redesign_images/testmonial_inner_bg_updated.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    margin-top: 105px;
+    
+}
+.test_m img{
+    width: 100%;
+    height: auto;
+}
+.test_m h6{
+    padding-top: 98px;
+    padding-bottom: 22px;
+    padding-bottom: 28px;
+    text-transform: uppercase;
+}
+.test_m h2{
+    width: 58%;
+    padding-bottom: 28px;
+    font-family: 'Gotham-Black';
+    font-size: 43px;
+}
+.test_m ul li .outer_clint{
+    float: left;
+    overflow: hidden;
+    width: 26.5%;
+    height: auto;
+}
+.test_m ul li .test_det {
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 350px;
+	width: 100%;
+	left: 0%;
+}
+.test_m ul li .test_det .test_con {
+	padding: 58px 56px 62px 43px;
+	/* float: left; */
+	/* margin-right: 30px; */
+	width: 480px !important;
+	background-color: #fff;
+	 box-shadow: -webkit-box-shadow: 9px 4px 20px 5px rgba(147,148,160,0.15); 
+	 -moz-box-shadow: 9px 4px 20px 5px rgba(147,148,160,0.15); 
+	box-shadow: 0 4px 10px 5px rgba(147, 148, 160, 0.15), 4px 0px 5px 0px rgba(148, 160, 160, 0.15);
+	/* box-shadow: -webkit-box-shadow: 1px 2px 12px 0px rgba(147,148,160,1); */
+	margin-bottom: 10px;
+	height: auto;
+	border-radius: 2px;
+	/* margin-right: 20px !important; */
+}
+.test_m ul li .test_det .test_con img.clone{
+    float: left;
+    text-align: left;
+    padding-bottom: 23px;
+    width: auto;
+}
+.test_m ul li .test_det .test_con p{
+    font-size: 21px;
+    color: #747474;
+    text-align: left;
+    float: left;
+    line-height: 35px;
+    padding-bottom: 50px;
+    font-family: 'Gotham-Medium';
+    overflow: hidden;
+}
+
+.test_m ul li .test_det .test_con .tset_clint{
+    overflow: hidden;
+    width: 100%;
+}
+.test_m ul li .test_det .test_con .tset_clint .clind_round_pic{
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 22px;
+}
+.test_m ul li .test_det .test_con .tset_clint .clind_round_des{
+    overflow: hidden;
+}
+.test_m ul li .test_det .test_con .tset_clint .clind_round_des h3{
+    font-size: 20px;
+    color: #2a2d71;
+    padding-bottom: 10px;
+    font-family: 'Gotham-Black';
+}
+.test_m ul li .test_det .test_con .tset_clint .clind_round_des span{
+    font-size: 15px;
+    color: #7f7f7f;
+    padding-bottom: 12px;
+    display: block;
+    font-family: 'Gotham-Book';
+}
+.test_m ul li .test_det .test_con .tset_clint .clind_round_des i{
+    float: left;
+    margin-right: 10px;
+    color: #f7941d;
+}
+.left_align{
+    position: relative;
+}
+.left_align::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 504px;
+	background: rgba(255,255,255,0.6);
+	z-index: 9;
+	left: 89.5%;
+	top: 75px;
+}
+
+/* Slider Buttons */
+.test_det .slick-arrow {
+    position: absolute;
+}
+
+.test_m .slick-prev, .test_m .slick-next {
+	width: 70px;
+	height: 60px;
+	background-color: #ffffff;
+    border: 0px;	
+    color: #cdcdcd;
+    border: none !important;
+    top: -26px;
+    bottom: auto;
+    color: transparent !important;
+}
+.test_m .slick-prev {
+    left: auto;
+    right: 360px;
+    top: -55px;
+}
+.test_m .slick-next {	
+    color: #fff;
+	background-color: #f7941d;
+    right: 253px;
+}
+.test_m .slick-prev::before, .test_m .slick-next::before{
+    font-size: 30px;
+    line-height:55px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    
+}
+.test_m .slick-prev::before{
+    padding-left: 10px;
+}
+.test_m .slick-next::before{
+    padding-right: 10px;
+}
+.test_m .slick-prev::before{
+    color: #cdcdcd !important;
+}
+
+.test_m .slick-next:hover{
+    background: #fff;
+    border: 0px !important;
+}
+.test_m .slick-next:after {
+    position: absolute;
+    content: "";
+    border-right: 35px solid #f7941d;
+    border-top: 60px solid transparent;
+    top: 0px;
+    color: #fff !important;
+    left: -35px;
+    height: 100%;
+}
+.test_m .slick-prev::after {
+    position: absolute;
+    content: "";
+    border-right: 35px solid transparent;
+    border-top: 60px solid #fff;
+    height: 100%;
+    top: 0;
+    right: -35px;
+}
+.test_m .slick-prev.cc:hover::before {
+	position: absolute;
+	content: "";
+	height: 60px;
+	width: 80px;
+	left: 0px;
+	border-right: 80px solid #f7941d;
+	border-top: 58px solid transparent;
+	top: 0px;
+	color: #fff !important;
+    transform: rotate(90deg);
+}
+
+.test_m .slick-next::after:hover{
+    background: #f7941d;
+}
+.test_m .slick-prev.cc:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background: #f7941d !important;
+    border: 0px !important;
+}
+.test_m .slick-next:hover{
+    color: #fff !important;
+}
+
+.test_m .slick-prev:hover, .test_m .slick-prev:focus, .test_m .slick-next:hover, .test_m .slick-next:focus{
+    background: #302f73 !important;
+    border: none !important;
+}
+.test_m .slick-prev:hover:after, .test_m .slick-prev:focus:after{
+    border-top-color: #302f73;
+}
+.test_m .slick-prev:hover::before {
+    color: #fff !important;
+}
+
+
+.test_m .slick-next:hover:after, .test_m .slick-next:focus:after{
+    border-right-color:  #302f73;
+}
+.test_m .slick-next:hover::before {
+    color: #fff !important;
+}
+
+/* Slider Buttons End*/
+
+.ss {
+    padding-bottom: 30px; {
+	padding: 58px 56px 62px 43px;
+	/* float: left; */
+	/* margin-right: 30px; */
+	width: 480px !important;
+	background-color: #fff;
+	/* box-shadow: -webkit-box-shadow: 9px 4px 20px 5px rgba(147,148,160,0.15); */
+	/* -moz-box-shadow: 9px 4px 20px 5px rgba(147,148,160,0.15); */
+	box-shadow: 0 4px 10px 5px rgba(147, 148, 160, 0.15), 4px 0px 5px 0px rgba(148, 160, 160, 0.15);
+	/* box-shadow: -webkit-box-shadow: 1px 2px 12px 0px rgba(147,148,160,1); */
+	margin-bottom: 10px;
+	height: auto;
+	border-radius: 2px;
+	/* margin-right: 20px !important; */
+}
+    
+}
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  background: ;
+}
+
+.slick-list {
+    padding-left: 0px!important;
+}
+.dd {
+	margin-top: 26px;
+}
+
+
+
+/*** testmonial sec end ***/
+
+
+/*** our brands sec start ***/
+
+.brand{
+    overflow: hidden;
+    margin-top: 80px;
+    text-align: center;
+}
+.brand img{
+    width: auto;
+    filter: grayscale(100%);
+    transition: all ease 1000ms 0s;
+}
+.brand img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+.brand img.one{
+    margin-top: -38px;
+}
+.brand img.one:hover{
+    margin-top: -33px;
+}
+.brand img.two{
+    margin-top: -6px;
+}
+.brand img.two:hover{
+    margin-top: 0px;
+}
+.brand img.three{
+    margin-top: -24px;
+}
+.brand img.three:hover{
+    margin-top: -17px;
+}
+.brand img.four{
+    margin-top: -50px;
+}
+.brand img.four:hover{
+    margin-top: -42px;
+}
+
+/*** our brands sec end ***/
+
+/***take your firm sec start ***/
+
+.take{
+    background-image: url(../images/redesign_images/take_your_firm_bg_updated.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    /*height: 680px;*/
+    margin-top: 150px;
+ }
+.take .mobile{
+    overflow: hidden;
+    margin-top: -50px;
+}
+.take .mobile img{
+    width: auto;
+    padding-bottom: 65px;
+}
+.take .take_con{
+    overflow: hidden;
+    padding-top: 123px;
+}
+.take .take_con h3{
+    font-size: 50px;
+    color: #fff;
+    line-height: 55px;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 30px;
+    font-family: 'Gotham-Black';
+}
+.take .take_con p{
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 43px;
+    font-family: 'Gotham-Book';
+}
+.take .take_con a{
+    float: left;
+    margin-right: 20px;
+}
+
+/***take your firm sec end**/
+
+
+/*** footer sec start ***/
+
+.footer{
+    overflow: hidden;
+    margin-top: 77px;
+}
+.footer .footer_logo{
+    padding-bottom: 30px;
+}
+.footer .footer_logo img{
+    width: auto;
+}
+.footer .footer_social{
+    overflow: hidden;
+}
+.footer .footer_social a{
+    float: left;
+    margin-right: 23px;
+    color: #b7b7b7;
+    font-size: 20px;
+}
+.footer .footer_social a:hover{
+    color: #2a2d71;
+}
+.footer h3{
+    font-size: 18px;
+    color: #392a5a;
+    padding-bottom: 30px;
+    font-family: 'Gotham-Black';
+}
+.footer ul li{
+    padding-bottom: 20px;
+}
+.footer ul li:last-child{
+    padding-bottom: 0px;
+}
+.footer ul li a{
+    font-size: 15px;
+    color: #858585;
+    text-decoration: none;
+    font-family: 'Gotham-Book';
+}
+.footer ul li a:hover{
+    color: #2a2d71;
+}
+.footer .quick ul li{
+    float: left;
+    width: 50%;
+    padding-bottom: 20px;
+}
+.footer .quick ul li a{
+    font-size: 15px;
+    color: #858585;
+    text-decoration: none;
+}
+.footer .quick ul li a:hover{
+    color: #2a2d71;
+}
+
+.footer_bottom_border{
+    border-bottom: 1px solid #e8e8e8;
+    padding-top: 68px;
+}
+
+/*** footer sec end ***/
+
+/*** copyright ***/
+
+.copyright{
+    overflow: hidden;
+}
+.copyright p{
+    font-size: 13px;
+    color: #8a8a8a;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/*** copyright ***/
+
+/*** go to top ***/
+
+.scrollTop {
+	position: fixed;
+	right: 2%;
+	bottom: 10px;
+	padding: 0px;
+	opacity: 0;
+	transition: all 0.4s ease-in-out 0s;
+    z-index: 10;
+}
+.scrollTop a {
+	font-size: 18px;
+	color: #fff;
+}
+
+
+/*** go to top ***/
+
+
+
+
+
+
+
+
+/*** About Us Inner Page start ***/
+
+.banner.about_us_inner{
+    background-image: url(../images/redesign_images/about_us_inner_bg_updated.png) !important;
+    background-position: bottom;
+    height: auto;
+    overflow: hidden;
+}
+.about_bottom_shap{
+    position: relative;
+    width: 100%;
+}
+
+.banner.about_us_inner .banner_cap .left_side_con h1{
+    padding-bottom: 209px;
+    padding-top: 320px;
+    padding-left: 30px;
+}
+
+/*** make the procedure sec start ***/
+
+.make{
+    position: relative;
+}
+.make .left_side_content {
+	padding-left: 53px;
+	padding-top: 105px;
+	position: relative;
+}
+.make .left_side_content h3{
+    font-size: 55px;
+    color: #2a2d71;
+    font-family: 'Gotham-Black';
+    line-height: 58px;
+    width: 100%;
+    padding-left: 35px;
+}
+.make .left_side_content h3 span{
+    color: #f7941d;
+}
+.make .left_side_content::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/make_effect_three.png);
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 94px;
+    top: 24%;
+    left: -15%;
+}
+.make .left_side_content::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/make_effect_four.png);
+    background-repeat: no-repeat;
+    width: 69px;
+    height: 69px;
+    top: 34%;
+    right: 0%;
+}
+.make .right_side_content{
+    padding-top: 112px;
+    position: relative;
+    padding-left: 15px;
+}
+.make .right_side_content p {
+	font-size: 18px;
+	font-family: 'Gotham-Medium';
+	color: #414141;
+	line-height: 33px;
+	text-align: left;
+	width: 80%;
+	padding-left: 27px;
+}
+.make .right_side_content p span.my_lawyer{
+    color: #2a2d71;
+    font-weight: 700;
+    font-family: 'Gotham-Black';
+}
+.make .right_side_content p span{
+    color: #414141;
+    font-weight: 700;
+    font-family: 'Gotham-Black';
+}
+
+.make .right_side_content::before {
+	position: absolute;
+	content: '';
+	background-image: url(../images/make_effect_two.png);
+	background-repeat: no-repeat;
+	width: 94px;
+	height: 94px;
+	bottom: -20%;
+	right: -10%;
+}
+.make .right_side_content::after {
+	position: absolute;
+	content: '';
+	background-image: url(../images/make_effect_one.png);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 143px;
+	top: -8%;
+	right: 0%;
+    z-index: -1;
+}
+
+/*** make the procedure sec end ***/
+
+
+/*** We Understand sec start ***/
+
+.we_understand{
+    overflow: hidden;
+    margin-top: 120px;
+    background-image: url(../images/redesign_images/we_understand_updated_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+}
+.we_understand .we_under_pic{
+    padding-top: 98px;
+    padding-left: 110px;
+}
+.we_understand .we_under_pic img{
+    width: 98%;
+    text-align: left;
+}
+.we_understand .we_content {
+	padding-top: 98px;
+	padding-left: 30px;
+	padding-bottom: 100px;
+}
+.we_understand .we_content h6{
+    text-align: left;
+    padding-bottom: 16px;
+    text-transform: uppercase;
+}
+.we_understand .we_content h2{
+    text-align: left;
+    padding-bottom: 22px;
+    width: 100%;
+}
+.we_understand .we_content p{
+    line-height: 30px;
+    color: #414141;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    padding-bottom: 6px;
+    width: 91%;
+    font-size: 17px;
+}
+.we_understand .we_content p span{
+    font-family: 'Gotham-Black';
+}
+.we_understand .we_content p:last-child{
+    padding-bottom: 0px;
+}
+
+
+/*** We Understand sec end ***/
+
+
+/*** Our Vision sec start ***/
+
+.our_vision{
+    margin-top: 65px;
+    overflow: hidden;
+}
+.our_vision .vision_content{
+    padding-left: 53px;
+}
+.our_vision .vision_content h6{
+    text-align: left;
+    padding-bottom: 14px;
+    text-transform: uppercase;
+    padding-left: 38px;
+    font-family: 'Gotham-Black';
+}
+.our_vision .vision_content h2 {
+	padding-bottom: 25px;
+	text-align: left;
+	width: 96%;
+	padding-left: 38px;
+	margin: 0px !important;
+}
+.our_vision .vision_content p{
+    font-size: 17px;
+    color: #414141;
+    line-height: 30px;
+    padding-bottom: 6px;
+    font-family: 'Gotham-Book';
+    width: 78%;
+    padding-left: 38px;
+}
+.our_vision .vision_content p span{
+    font-family: 'Gotham-Black';
+}
+.our_vision .vision_content p.our_vision_bottom{
+    font-family: 'Gotham-Black';
+    width: 94%;
+}
+
+.our_vision .vison_pic{
+    height: auto;
+}
+.our_vision .vison_pic img{
+    height: auto;
+    width: auto;
+}
+
+
+/*** Our Vision sec end ***/
+
+
+/*** About Us Inner Page end ***/
+
+
+
+
+/*** Contact Us Inner Page Start ***/
+
+.banner.contact_us_inner{
+    background-image: url(../images/redesign_images/contact_us_inner_bg_updated.png) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+}
+.banner.contact_us_inner .banner_cap .left_side_con h1 {
+	padding-bottom: 170px;
+	padding-top: 300px;
+	padding-left: 30px;
+}
+
+/*** Form sec start ***/
+
+.contact_form{
+    width: auto;
+    position: relative;
+}
+.contact_form ul li .contact_address {
+	width: 55.7%;
+	margin-left: 30px;
+	overflow: hidden;
+	float: left;
+	margin-top: 14%;
+}
+.contact_form ul li .contact_address h3{
+    font-size: 28px;
+    color: #312b65;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    text-transform: capitalize;
+    padding-top: 78px;
+    padding-bottom: 52px;
+}
+.contact_form ul li .contact_address ul li{
+    width: 40%;
+}
+.contact_form ul li .contact_address ul li:last-child {
+	float: right;
+	width: 59%;
+	margin-top: -51.7%;
+}
+.contact_form ul li .contact_address ul li .address_des{
+    overflow: hidden;
+    width: 100%;
+}
+.contact_form ul li .contact_address ul li .address_des .map_icon{
+    width: 47px;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #2a2d71;
+    margin-right: 18px;
+    float: left;
+}
+.contact_form ul li .contact_address ul li .address_des .map_icon img{
+    padding: 12px 14px;
+}
+.contact_form ul li .contact_address ul li .address_des .map_icon img.call_icon{
+    padding: 14px;
+}
+.contact_form ul li .contact_address ul li .address_des .map_icon img.email_icon{
+    padding: 16px 13px;
+}
+.contact_form ul li .contact_address ul li .address_des .map_icon img.timing_icon{
+    padding: 12px;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content{
+    width: 100%;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content h5{
+    font-size: 15px;
+    color: #312b65;
+    font-family: 'Gotham-Medium';
+    text-transform: uppercase;
+    padding-bottom: 17px;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content h5.ph_one{
+    padding-bottom: 12px;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content p {
+	font-size: 16px;
+	color: #575757;
+	line-height: 26px;
+	font-family: 'Gotham-Book';
+	text-align: left;
+	width: 83%;
+	padding-left: 25%;
+    padding-bottom: 27px;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content p.single_line{
+    width: 85%;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content p.phonenumber{
+    font-size: 18px;
+    font-family: 'Gotham-Black';
+}
+.contact_form ul li .contact_address ul li .address_des .address_content p.email{
+    font-size: 17px;
+    font-family: 'Gotham-Medium';
+}
+.contact_form ul li .contact_address ul li:last-child .address_des .address_content p{
+    padding-left: 17%;
+}
+.contact_form ul li .contact_address ul li .address_des .address_content p span{
+    display: block;
+}
+.contact_form ul li .contact_address ul li:last-child .address_des{
+    float: right;
+}
+.contact_form ul li:last-child .contact_us_form{
+    margin-top: -9%;
+    margin-left: 30px;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+.contact_form ul li .contact_us_form .form_shape{
+    background-color: #fff;
+    border-top: 7px solid #f7941d;
+    margin-right: 30px;
+    box-shadow: 0px 1px 25px 8px rgba(195,195,195,0.3);
+    padding-left: 45px;
+    padding-right: 45px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.contact_form ul li .contact_us_form .form_shape::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/contact_us_form_bottom_triangle.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: 445px;
+    height: 70px;
+    left: 0;
+    bottom: -70px;
+    /*box-shadow: 1px 1px 30px -9px #c3c3c3;*/
+    display: none;
+}
+.contact_form ul li .contact_us_form .form_shape h3{
+    font-size: 35px;
+    color: #312b65;
+    font-family: 'Gotham-Black';
+    padding-top: 47px;
+    padding-bottom: 22px;
+}
+.contact_form ul li .contact_us_form .form_shape p{
+    font-size: 17px;
+    color: #606060;
+    font-family: 'Gotham-Book';
+    padding-bottom: 52px;
+    line-height: 27px;
+}
+.contact_form ul li .contact_us_form .form_shape ul li{
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 20px;
+}
+.contact_form ul li .contact_us_form .form_shape ul li:last-child{
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+}
+.contact_form ul li .contact_us_form .form_shape ul li i{
+    padding-left: 8px;
+    padding-right: 21px;
+    font-size: 16px;
+    color: #777777;
+}
+.contact_form ul li .contact_us_form .form_shape ul li:hover i{
+    color: #2a2d71;
+}
+.contact_form ul li .contact_us_form .form_shape ul li input[type="text"] {
+    font-size: 15px;
+    color: #777777;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    border: 0px;
+    width: 88%;
+    border: 0px;
+    float: right;
+    outline: none;
+    background-color: #fff;
+}
+.contact_form ul li .contact_us_form .form_shape ul li input[type="email"] {
+    font-size: 15px;
+    color: #777777;
+    font-family: 'Gotham-Book';
+    border: 0px;
+    width: 87%;
+    border: 0px;
+    float: right;
+    outline: none;
+    background-color: #fff;
+}
+.contact_form ul li .contact_us_form .form_shape ul li:hover input[type="text"]{
+    color: #2a2d71;
+}
+.contact_form ul li .contact_us_form .form_shape ul li textarea{
+    color: #777777;
+    font-size: 15px;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    width: 87%;
+    border: 0px;
+    float: right;
+    outline: none;
+    background-color: #fff;
+}
+.contact_form ul li .contact_us_form .form_shape a{
+    margin: 0px auto;
+    margin-top: 32px;
+    margin-bottom: 50px;
+    background-color: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,2d255f+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #2a2d71 0%, #2d255f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #2a2d71 0%,#2d255f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #2a2d71 0%,#2d255f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#2d255f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+    color: #fff;
+    padding: 22.5px 119px;
+    font-family: 'Gotham-Black';
+    text-align: center;
+    display: inline-flex;
+    border-radius: 3px;
+}
+.contact_form ul li .contact_us_form .form_shape a:hover{
+    background-color: #f7941d !important;
+    color: #fff;
+    transition: 0.5s;
+    background: none;
+}
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+	position: relative;
+	display: flex;
+	width: 87%;
+	overflow: hidden;
+	float: right;
+}
+select {
+  flex: 1;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+    color: #777777;
+}
+/* Transition */
+.select:hover::after {
+  color: #2a2d71;
+}
+
+
+/*** Form sec end ***/
+
+/*** contact us map sec start ***/
+
+/* .contact_us_map{
+    width: auto;
+    margin-top: -532px;
+    clip-path: polygon(66% 61%, 0 100%, 100% 100%);
+    height: 100%;
+    background-color: #f7941d;
+    height: 638px;
+    position: relative;
+}
+.contact_us_map::after {
+	position: absolute;
+	background-image: url(../images/yellow.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 374px;
+	width: 100%;
+	content: "";
+	bottom: -4px;
+	left: 62px;
+	margin-left: -70px;
+} */
+
+/*.contact_us_map::after {
+	position: absolute;
+	background-image: url(../images/11.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 638px;
+	width: 100%;
+	content: "";
+	bottom: -4px;
+	left: 62px;
+	margin-left: -70px;
+}*/
+
+/*.contact_us_map .google_maps::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/contact_us_map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 638px;
+    width: 100%;
+    left: 0;
+    bottom: 5px;*/
+}
+.contact_us_map .custom_map{
+    overflow: hidden;
+    margin-top: 220px;
+    height: 100%;
+   
+}
+.contact_us_map .custom_map iframe{
+    width: 100%;
+    
+}
+/*.contact_us_map .google_maps::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/yellow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1067px;
+    height: 313px;
+    left: 0;
+    top: 5%;
+}
+    .triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 500px solid transparent;
+      border-right: 150px solid transparent;
+      border-bottom: 100px solid red;
+    }
+
+/*.contact_map{
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-top: -115px;
+}
+.contact_map iframe{
+    width: 100%;
+}
+.gm-style .place-card-large{
+    display: none !important;
+}
+.gm-style .place-card-large {
+	padding: 9px 4px 9px 11px;
+	display: none;
+}*/
+/*** contact us map sec end ***/
+
+/*** Contact Us Inner Page end ***/
+
+
+
+
+/* contact css */
+.contact_us_map{
+    width: 100%;     
+    position: relative;
+    margin-top: -155px;
+    position: relative;
+}
+.contact_us_map:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/pattern-2.png);
+    background-repeat: no-repeat;
+    left: 0;
+    background-size: 85%;
+    z-index: -1;
+    display: none;
+}
+
+
+.custom_map{
+    clip-path: polygon(66% 0px, 100% 15%, 100% 100%, 0px 100%, 0px 45%);
+}
+
+.contact_us_map iframe{
+    min-height: 750px;
+    width: 100%;
+}
+
+@media (max-width: 1600px) {
+    .custom_map {
+        clip-path: polygon(66% 0px, 100% 15%, 100% 100%, 0px 100%, 0px 37%);
+    }
+}
+
+
+@media (max-width: 1460px) {
+    .custom_map {
+        clip-path: polygon(66% 0px, 100% 15%, 100% 100%, 0px 100%, 0px 30%);
+    }
+}
+
+
+
+
+/*** Our Services Inner Page start ***/
+
+.banner.our_services_inner{
+    background-image: url(../images/redesign_images/our_services_bg_updated.png) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    height: auto;
+}
+.banner.our_services_inner .banner_cap .left_side_con h1 {
+	padding-bottom: 209px;
+	padding-top: 304px;
+	padding-left: 30px;
+    font-size: 55px;
+}
+
+/*** Our Services sec start ***/
+
+.total_service{
+    overflow: hidden;
+    margin-top: 88px;
+}
+.total_service .service_gap{
+    margin-bottom: 30px;
+}
+.total_service .service_section{
+    overflow: hidden;
+    box-shadow:  7px 1px 30px -9px #dcdcdc;
+    cursor: pointer;
+}
+.total_service .service_section .bor_der{
+    border: 1px solid #dfdfdf !important;
+    margin-top: -90px;
+}
+.total_service .service_section img{
+    padding-bottom: 37px;
+    width: 100%;
+    height: auto;
+}
+.total_service .service_section .bor_der{
+    border: 1px solid #dfdfdf !important;
+}
+.total_service .service_section .bor_der h3 {
+	font-size: 23px;
+	color: #2a2d71;
+	text-align: center;
+	font-family: 'Gotham-Black';
+	padding-bottom: 20px;
+	padding-top: 84px;
+}
+.total_service .service_section .bor_der p{
+    font-size: 17px;
+    color: #575757;
+    font-family: 'ProximaNova-Regular';
+    text-align: center;
+    margin: 0px auto !important;
+    width: 79%;
+    line-height: 26px;
+}
+.total_service .service_section .bor_der a {
+	margin: 32px 47px 44px 48px;
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	padding: 12px 52px;
+	text-align: center;
+	color: #2a2d71;
+	font-family: 'ProximaNova-Bold';
+	cursor: pointer;
+	text-transform: uppercase;
+	display: block;
+}
+.total_service .service_section:hover .bor_der a{
+    background-color: #302b71;
+    color: #fff;
+    transition: 0.5s;
+}
+.service_yellow_box {
+	/* clip-path: polygon(56.23% 60.34%, 0px 45.10%, 0px 0px, 100% 0px, 99.99% 49.36%); */
+	/* background-color: #f7941d; */
+	/* height: 410px; 
+	position: relative;
+	background-image: url(../images/yellow_box.png);
+	background-repeat: no-repeat;*/
+	height: auto;
+}
+.service_yellow_box::aftr{
+    position: absolute;
+    content: "";
+    background-image: url(../images/yellow_box.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+    top: 5%;
+}
+.service_gry_box {
+	/*clip-path: polygon(43.26% 62.58%, 0px 53.03%, 0px 0px, 100% 0px, 100% 49.91%);
+	background-color: #c3c3c3;
+	height: 385px;*/
+}
+
+/*** Our Services sec end ***/
+
+/*** Our Services Inner Page end ***/
+
+
+/*** Terms and condition Inner Page start ***/
+
+.banner.terms_inner_bg{
+    overflow: hidden;
+    background-image: url(../images/redesign_images/terms_and_condition_inner_bg_updated.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+}
+.banner.terms_inner_bg .banner_cap .left_side_con h1 {
+	padding-bottom: 209px;
+	padding-top: 254px;
+	padding-left: 30px;
+    width: 47%;
+    line-height: 60px;
+    font-size: 55px;
+}
+.terms{
+    overflow: hidden;
+    padding-top: 66px;
+}
+.terms .total_terms{
+    padding-left: 30px;
+}
+.terms .total_terms h4{
+    font-size: 14px;
+    color: #f7941d;
+    text-align: left;
+    font-family: 'Gotham-Medium';
+    padding-bottom: 20px;
+}
+.terms .total_terms h3{
+    font-size: 24px;
+    color: #312b65;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    padding-bottom: 47px;
+}
+.terms .total_terms p{
+    font-size: 17px;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    line-height: 28px;
+    color: #515151;
+    padding-bottom: 56px;
+}
+.terms .total_terms p.first_para{
+    padding-bottom: 38px;
+}
+.terms .total_terms p.second_para{
+    padding-bottom: 36px;
+}
+.terms .total_terms p span{
+    font-family: 'Gotham-Medium';
+}
+.terms .total_terms h3.Cookies{
+    padding-bottom: 28px;
+}
+.terms .total_terms h3.License{
+    padding-top: 3px;
+    padding-bottom: 26px;
+}
+.terms .total_terms p.unless{
+    padding-bottom: 31px;
+}
+.terms .total_terms ul li img{
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 16px;
+}
+.terms .total_terms ul li{
+    font-size: 17px;
+    color: #515151;
+    font-family: 'Gotham-Medium';
+    display: table;
+}
+.terms .total_terms p.agreement{
+    padding-top: 24px;
+    padding-bottom: 34px;
+}
+.terms .total_terms p.parts{
+    padding-bottom: 38px;
+}
+.terms .total_terms p.company{
+    padding-bottom: 64px;
+}
+.terms .total_terms h3.hyperlinking{
+    padding-bottom: 27px;
+}
+.terms .total_terms p.following{
+    padding-bottom: 30px;
+}
+.terms .total_terms ul li.online_dir{
+    padding-bottom: 24px;
+}
+.terms .total_terms p.last_para{
+    padding-top: 37px;
+    padding-bottom: 0px;
+}
+
+/*** Terms and condition Inner Page end ***/
+
+
+/*** service inner detail page start ***/
+
+.service_inner_detail{
+    overflow: hidden;
+    margin-top: 90px
+}
+.service_inner_detail .service_detail_sec{
+    padding-left: 30px;
+}
+.service_inner_detail .service_detail_sec .left_fix_nav{
+    border: 1px solid #e6e6e6;
+}
+.service_inner_detail .service_detail_sec .service_heading{
+    overflow: hidden;
+    background-color: #2a2d71;
+    height: auto;
+    margin-bottom: 30px;
+}
+.service_inner_detail .service_detail_sec .service_heading h3{
+    font-size: 26px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    padding: 15px 38px;
+}
+
+
+.service_inner_detail .service_detail_sec .tabs-left, .tabs-right {
+    border-bottom: none;
+    padding-top: 2px;
+    padding-left: 16px;
+    padding-right: 17px;
+}
+.service_inner_detail .service_detail_sec .tabs-left {
+  
+}
+.service_inner_detail .service_detail_sec .tabs-right {
+  
+}
+.service_inner_detail .service_detail_sec .tabs-left>li, .tabs-right>li {
+    float: none;
+    width: 100%;
+}
+.service_inner_detail .service_detail_sec .tabs-left>li {
+    border-bottom: 1px solid #eeeeee;
+    padding: 18px 0 17px 20px;
+    margin-bottom: 23px;
+}
+.service_inner_detail .service_detail_sec .tabs-left>li:hover{
+    background-color: #f7941d;
+}
+.service_inner_detail .service_detail_sec .tabs-left > li >:hover a{
+    color: #fff !important;
+}
+.service_inner_detail .service_detail_sec .tabs-right>li {
+  margin-left: -1px;
+}
+
+.service_inner_detail .service_detail_sec .tabs-left li.active{
+    background-color: #f7941d;
+}
+.service_inner_detail .service_detail_sec .tabs-left li.active a{
+    color: #fff;
+}
+
+.service_inner_detail .service_detail_sec .tabs-left > li:hover > a{
+    color: #fff;
+}
+
+.service_inner_detail .service_detail_sec .tabs-right>li.active>a,
+.service_inner_detail .service_detail_sec .tabs-right>li.active>a:hover,
+.service_inner_detail .service_detail_sec .tabs-right>li.active>a:focus {
+  border-bottom: 1px solid #ddd;
+    color: #fff;
+}
+.service_inner_detail .service_detail_sec .tabs-left>li>a {
+    margin-right: 0;
+    display:block;
+    font-size: 16px;
+    font-family: 'Gotham-Medium';
+    color: #5f5f5f;
+}
+.service_inner_detail .service_detail_sec .tabs-right>li>a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+.service_inner_detail .service_detail_sec .service_full_detail .tab-content h3{
+    font-size: 40px;
+    color: #2a2d71;
+    font-family: 'Gotham-Black';
+    padding-bottom: 28px;
+}
+#Accident-Claims{
+    display: block;
+}
+.service_inner_detail .service_detail_sec .service_full_detail{
+    margin-left: 28px;
+}
+.service_inner_detail .service_detail_sec .box_3d{
+    position: relative;
+    height: 337px;
+}
+.service_inner_detail .service_detail_sec .top_big_image{
+    height: auto;
+    overflow: hidden;
+    width: auto;
+    height: 317px;
+}
+.service_inner_detail .service_detail_sec .top_big_image img{
+    width: 100%;
+}
+.service_inner_detail .service_detail_sec .service_full_detail .box_3d::after{
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    right: 0px;
+    background-image: url(../images/our_service_inner_detail_image_box_border.png);
+    width: 179px;
+    height: 168px;
+}
+.service_inner_detail .service_detail_sec .box_3d_second{
+    position: relative;
+    height: 337px;
+}
+.service_inner_detail .service_detail_sec .box_3d_second::before{
+    position: absolute;
+    content: "";
+    bottom: 2px;
+    left: 0px;
+    background-image: url(../images/our_service_inner_detail_image_box_border_left.png);
+    width: 153px;
+    height: 156px;
+}
+
+.ytp-large-play-button{
+    display: none;
+}
+
+.service_inner_detail .service_detail_sec .top_big_image iframe{
+    width: 100%;
+}
+.service_inner_detail .service_detail_sec .service_detail_content{
+    overflow: hidden;
+    margin-top: 40px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p{
+    font-size: 17px;
+    color: #515151;
+    font-family: 'Gotham-Book';
+    padding-bottom: 36px;
+    line-height: 29px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p span{
+    font-family: 'Gotham-Medium';
+}
+.service_inner_detail .service_detail_sec .service_detail_content h4{
+    font-size: 24px;
+    color: #2a2d71;
+    font-family: 'Gotham-Black';
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content ul{
+    margin-bottom: 0px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content ul li{
+    font-size: 18px;
+    color: #515151;
+    font-family: 'Gotham-Medium';
+    display: table;
+}
+.service_inner_detail .service_detail_sec .service_detail_content ul li img{
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content ul li:last-child{
+    padding-bottom: 48px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p.over_20_years{
+    border-bottom: 1px solid #e7e7e7;
+}
+.service_inner_detail .service_detail_sec .service_detail_content h4.uae_family_law{
+    padding-top: 43px;
+    padding-bottom: 33px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content h5{
+    font-size: 22px;
+    color: #373737;
+    font-family: 'Gotham-Black';
+    padding-bottom: 22px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content h5.child{
+    padding-top: 40px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content h5.Divorce{
+    padding-top: 0px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p.non{
+    padding-top: 4px;
+    padding-bottom: 40px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p.child{
+    padding-bottom: 40px;
+}
+.service_inner_detail .service_detail_sec .service_detail_content p:last-child{
+    padding-bottom: 0px;
+}
+.total_service .view{
+    margin-top: 30px;
+    display: flex;
+}
+.total_service .view a.view_all_service{
+    font-size: 17px;
+    background-color: #342a70;
+    font-family: 'Gotham-Black';
+    text-align: center;
+    padding: 18px 30px;
+    margin: 0px auto;
+    text-transform: capitalize;
+    color: #fff;
+}
+.total_service .view a:hover.view_all_service{
+    background-color: #f7941d;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+
+#tabs-containers {
+    width: 100%;
+}
+
+.all_service_tab {
+	width: 100%;
+	text-align: left;
+	padding-top: 2px;
+	padding-left: 16px;
+	padding-right: 17px;
+}
+
+.all_service_tab li {
+	box-sizing: border-box;
+	list-style: outside none none;
+}
+
+.all_service_tab .pruduct_category_currents a,
+.federal_tabs-menus li:hover a {
+    color: #fff;
+    background: #f7941d;
+}
+
+.all_service_tab li a {
+	display: block;
+	border-bottom: 1px solid #eeeeee;
+	margin-bottom: 23px;
+	padding: 18px 0 17px 20px;
+	font-size: 16px;
+	font-family: 'Gotham-Medium';
+    color: #5f5f5f;
+}
+	
+
+.tab {
+    
+}
+
+.tab_content_active_js {
+    display: none;
+    /* padding: 70px 0; */
+    float: none;
+    width: auto;
+    margin-top: 0;
+}
+
+
+/*** service inner detail page end ***/
+
+
+/*** Package inner page start ***/
+
+.package_inner_bg{
+    background-image: url(../images/redesign_images/package_inner_bg_updated.png);
+    background-position: center center;
+}
+.banner.package_inner_bg .banner_cap .left_side_con h1{
+    padding-bottom: 209px;
+    padding-top: 220px;
+    padding-left: 30px;
+    font-size: 55px;
+}
+.package{
+    overflow: hidden;
+    margin-top: 82px;
+}
+.package h6{
+    padding-bottom: 33px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.package h2{
+    padding-bottom: 45px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.package .price_sec {
+	clip-path: polygon(100% 0px, 100.55% 71.69%, 49.93% 100.33%, 49.94% 100.33%, -4px 69.97%, 0% 0%);
+	background: linear-gradient(135deg, #2a2d71 0%,#47357b 100%);
+	height: 215px;
+	position: relative;
+}
+.package .price_sec::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/sliver_effect.png);
+    background-repeat: no-repeat;
+    height: 61px;
+    width: 61px;
+    left: 10%;
+    top: 17%;
+}
+.package .price_sec::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/sliver_effect_one.png);
+    background-repeat: no-repeat;
+    height: 47px;
+    width: 47px;
+    right: 13%;
+    bottom: 38%;
+}
+.package .price_sec h5{
+    text-align: center;
+    padding-top: 44px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.package .price_sec p{
+    font-size: 53px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Gotham-Black';
+    padding-bottom: 10px;
+    padding-top: 45px;
+}
+.package .price_sec span{
+    text-align: center;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    font-size: 16px;
+    display: block;
+    padding-top: 3px;
+}
+.package .price_benifit {
+	clip-path: polygon(49.62% 11.57%, 103.20% -1px, 100% 100%, 0px 100%, -32px -12px);
+	background: linear-gradient(135deg, #2a2d71 0%,#47357b 100%);
+	height: auto;
+	margin-top: -54px;
+	padding: 98px 36px 43px 36px;
+}
+.package .price_benifit ul{
+    
+}
+.package .price_benifit ul li{
+    border-bottom: 1px solid #5b509d;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Gotham-Medium';
+    text-transform: capitalize;
+}
+.package .price_benifit ul li:last-child{
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.package .price_benifit a{
+    margin-top: 52px;
+    color: #48357b;
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+    text-align: center;
+    padding: 17.5px 25px;
+    text-transform: uppercase;
+    display: block;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.package .price_benifit a:hover{
+    border-radius: 50px;
+    background-color: #f7941d !important;
+    color: #fff;
+    transition: 0.5s;
+    
+}
+
+.package .price_sec.price_sec_two{
+    background: linear-gradient(135deg, #f7941d 0%,#f77f25 99%);
+}
+.package .price_benifit.price_benifit_two{
+    background: linear-gradient(135deg, #f7941d 0%,#f77f25 99%);
+}
+.package .price_sec.price_sec_two::after{
+    background-image: url(../images/gold_effect.png);
+}
+.package .price_sec.price_sec_two::before{
+    background-image: url(../images/gold_effect_one.png);
+}
+.package .price_benifit.price_benifit_two ul li{
+    border-bottom: 1px solid #ffb26e;
+}
+.package .price_benifit.price_benifit_two ul li:last-child{
+    border-bottom: 0px;
+}
+.package .price_sec.price_sec_three{
+    background: linear-gradient(135deg, #3ec594 0%,#3eb2bc 99%);
+}
+.package .price_benifit.price_benifit_three{
+    background: linear-gradient(135deg, #3ec594 0%,#3eb2bc 99%);
+}
+.package .price_sec.price_sec_three::after{
+    background-image: url(../images/diamond_effcet.png);
+}
+.package .price_sec.price_sec_three::before{
+    background-image: url(../images/diamond_effcet_one.png);
+}
+.package .price_benifit.price_benifit_three ul li{
+    border-bottom: 1px solid #71e9c5;
+}
+.package .price_benifit.price_benifit_three ul li:last-child{
+    border-bottom: 0px;
+}
+.package .best_seller {
+	margin: 0px 108.5px -15px;
+	display: block;
+	border-radius: 2px;
+	background-color: #2b2b2b;
+	position: relative;
+	z-index: 1;
+}
+.package .best_seller p{
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    padding: 4px 13px;
+    letter-spacing: 1px;
+    font-family: 'Gotham-Black';
+}
+.package .silver_top_gaping{
+    margin-top: 16px;
+}
+
+/*** Package inner page end ***/
+
+
+
+/*** Law Firm _public Profile inner page start ***/
+
+.banner.law_firm_inner{
+    background-image: url(../images/redesign_images/law_firm_public_profile_inner_bg_updated.png);
+    background-repeat: no-repeat;
+    height: auto;
+    overflow: hidden;
+    background-position: bottom;
+}
+.banner.law_firm_inner .banner_cap .left_side_con h1 {
+	padding-bottom: 30px;
+	padding-top: 220px;
+	padding-left: 30px;
+    font-size: 53px;
+    width: 42%;
+    line-height: 60px;
+}
+.banner.law_firm_inner .banner_cap .left_side_con ul{
+    padding-bottom: 105px;
+    padding-left: 30px;
+}
+.banner.law_firm_inner .banner_cap .left_side_con ul li{
+    float: left;
+    margin-right: 8px;
+    font-size: 26px;
+    color: #f7941d;
+}
+.banner.law_firm_inner .banner_cap .left_side_con ul li:last-child{
+    margin-right: 0px;
+}
+.public_lawyear{
+    overflow: hidden;
+    margin-top: 60px;
+    padding-bottom: 65px;
+    border-bottom: 1px solid #efefef;
+}
+.public_lawyear .left_content{
+    height: 100%;
+}
+.public_lawyear .left_content .top_con_tact{
+    border: 1px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+.public_lawyear .left_content .top_con_tact .top_lawfirm_logo{
+    overflow: hidden;
+    text-align: center;
+}
+.public_lawyear .left_content .top_con_tact .top_lawfirm_logo img{
+    width: auto;
+}
+.public_lawyear .left_content .top_con_tact .shape {
+	/*clip-path: polygon(48.22% 8.31%, 99.72% 65px, 99.49% 99.99%, 0px 100.12%, -1px 8.48%);*/
+	/*background-color: #f7941d;*/
+    margin-top: -90px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy {
+	/*clip-path: polygon(49.16% 9.36%, 100.10% 76px, 99.72% 99.98%, 0px 100%, -1px 9.42%);*/
+	background: background: #2a2d71;
+	background: -moz-linear-gradient(-45deg, #2a2d71 0%, #312c66 100%);
+	background: -webkit-linear-gradient(-45deg, #2a2d71 0%,#312c66 100%);
+	background: linear-gradient(135deg, #2a2d71 0%,#312c66 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#312c66',GradientType=1 );
+	height: auto;
+	width: 100%;
+    margin-top: 100px;
+}
+
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info{
+    padding: 40px 22px 0 22px !important;
+    overflow: hidden;
+} 
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info h5{
+    font-size: 19px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    padding-bottom: 34px;
+    padding-left: 16px;
+    text-transform: capitalize;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul{
+    margin-bottom: 0px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li{
+    border-bottom: 1px solid #3e4080;
+    margin-bottom: 20px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li:last-child{
+    border-bottom: 0px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li p{
+    padding-left: 16px;
+    font-size: 13px;
+    color: #f7941d;
+    text-align: left;
+    font-family: 'Gotham-Medium';
+    padding-bottom: 16px;
+    text-transform: uppercase;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li span{
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Gotham-Book';
+    padding-bottom: 18px;
+    padding-left: 16px;
+    display: flex;
+    width: 84%;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li span.phone_Number{
+    font-family: 'Gotham-Medium';
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #565092;
+    float: left;
+    margin-right: 10px;
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li:last-child{
+    margin-right: 0px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul{
+    padding-left: 16px;
+    margin-bottom: 40px;
+    display: flex;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li a i{
+    font-size: 14px;
+    color: #a5a0dc;
+    padding: 9px 10px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li a i.fb{
+    
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li a i:hover
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li a i:hover{
+    color: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li:hover{
+    border: none;
+    background-color: #ffa63a;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li ul li:hover a i{
+    color: #fff;
+    padding: 11px 12px;
+}
+.public_lawyear .left_content .left_small_map{
+    margin-top: 20px;
+    height: 240px;
+    margin-bottom: 20px;
+}
+.public_lawyear .left_content .left_small_map iframe{
+    width: 100%;
+    height: 100%;
+}
+.public_lawyear .left_content .working_time{
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+}
+.public_lawyear .left_content .working_time .header_working{
+    overflow: hidden;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,302c68+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d71 0%, #302c68 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d71 0%,#302c68 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d71 0%,#302c68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#302c68',GradientType=1 ); /* IE6-9 */
+    height: auto;
+    margin-bottom: 22px;
+}
+.public_lawyear .left_content .working_time .header_working h5 {
+	font-size: 19px;
+	font-family: 'Gotham-Black';
+	color: #fff;
+	text-align: left;
+	padding: 16px 31px 17px;
+}
+.public_lawyear .left_content .working_time  ul li{
+    margin: 0 22px 0 22px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 10px;
+}
+.public_lawyear .left_content .working_time  ul li:last-child{
+    border-bottom: none;
+}
+.public_lawyear .left_content .working_time  ul li p{
+    padding-left: 16px;
+    font-size: 13px;
+    color: #f7941d;
+    text-align: left;
+    font-family: 'Gotham-Medium';
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+.public_lawyear .left_content .working_time  ul li span{
+    font-size: 14px;
+    color: #5c5c5c;
+    font-family: 'Gotham-Book';
+    padding-bottom: 22px;
+    padding-left: 16px;
+    display: flex;
+    width: 84%;
+}
+.public_lawyear .left_content .working_time ul li:last-child span{
+    padding-bottom: 0px;
+}
+.public_lawyear .left_content .review{
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+}
+
+.public_lawyear .left_content .review .header_review{
+    overflow: hidden;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,302c68+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d71 0%, #302c68 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d71 0%,#302c68 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d71 0%,#302c68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#302c68',GradientType=1 ); /* IE6-9 */
+    height: auto;
+    margin-bottom: 22px;
+}
+.public_lawyear .left_content .review .header_review h5 {
+	font-size: 19px;
+	font-family: 'Gotham-Black';
+	color: #fff;
+	text-align: left;
+	padding: 16px 31px 17px;
+}
+.public_lawyear .left_content .review  ul li{
+    margin: 0 22px 0 22px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+.public_lawyear .left_content .review  ul li:last-child{
+    border-bottom: none;
+}
+.public_lawyear .left_content .review  ul li p{
+    padding-left: 16px;
+    font-size: 13px;
+    color: #5c5c5c;
+    text-align: left;
+    font-family: 'Gotham-Medium';
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.public_lawyear .left_content .review  ul li span{
+    font-size: 14px;
+    color: #5c5c5c;
+    font-family: 'Gotham-Book';
+    padding-bottom: 18px;
+    padding-left: 16px;
+    display: flex;
+    width: 72%;
+}
+.public_lawyear .left_content .review  ul li i{
+    margin-right: 5px;
+    font-size: 17px;
+    padding-bottom: 18px;
+    color: #f7941d;
+}
+.public_lawyear .left_content .review  ul li i.first_one{
+    padding-left: 16px;
+}
+.public_lawyear .left_content .review  ul li i.gry_star{
+    color: #d3d3d3;
+}
+.public_lawyear .left_content .review ul li span:last-child{
+    padding-bottom: 0px;
+}
+.public_lawyear .left_content .small_contact_form{
+    overflow: hidden;
+    padding: 33px 27px 30px 27px;
+    background: linear-gradient(135deg, #2a2d71 0%,#312c66 100%);
+}
+.public_lawyear .left_content .small_contact_form h5{
+    padding-left: 3px;
+    font-size: 19px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    padding-bottom: 25px;
+}
+.public_lawyear .left_content .small_contact_form input[type="text"] {
+	font-size: 13px;
+	color: #979797;
+	background-color: #fff;
+	padding: 14.5px 20px;
+	outline: none;
+	border: 0px;
+	text-transform: capitalize;
+	width: 100%;
+    font-family: 'Gotham-Book';
+    margin-bottom: 10px;
+}
+.public_lawyear .left_content .small_contact_form input[type="email"] {
+	font-size: 13px;
+	color: #979797;
+	background-color: #fff;
+	padding: 14.5px 20px;
+	outline: none;
+	border: 0px;
+	text-transform: capitalize;
+	width: 100%;
+    font-family: 'Gotham-Book';
+    margin-bottom: 10px;
+}
+.public_lawyear .left_content .small_contact_form textarea {
+	font-size: 13px;
+	color: #979797;
+	background-color: #fff;
+	padding: 26px 20px;
+	outline: none;
+	border: 0px;
+	text-transform: capitalize;
+	width: 100%;
+    font-family: 'Gotham-Book';
+    margin-bottom: 12px;
+}
+.public_lawyear .left_content .small_contact_form button{
+    font-size: 16px;
+    color: #fff;
+    background-color: #f08316;
+    text-align: center;
+    padding: 15.5px 0;
+    width: 100%;
+    outline: none;
+    border: 0px;
+    font-family: 'Gotham-Black';
+    border-radius: 2px;
+}
+.claim{
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #f0f0f0;
+}
+.claim .claim_header{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,302c68+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d71 0%, #302c68 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d71 0%,#302c68 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d71 0%,#302c68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#302c68',GradientType=1 ); /* IE6-9 */
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+.claim .claim_header h5{
+    font-size: 19px;
+    font-family: 'Gotham-Black';
+    color: #fff;
+    text-align: left;
+    padding: 16px 31px 17px;
+}
+.claim form{
+    margin: 0 27px;
+}
+.claim input[type="text"]{
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #979797;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    padding: 12.5px 15px;
+}
+.claim textarea{
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #979797;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    padding: 23.5px 15px;
+}
+.claim button{
+    font-size: 16px;
+    color: #fff;
+    background-color: #f08316;
+    text-align: center;
+    padding: 15.5px 0;
+    width: 100%;
+    outline: none;
+    border: 0px;
+    font-family: 'Gotham-Black';
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+.claim button.hvr-sweep-to-right::before{
+    background-color: #2a2d71;
+}
+.public_lawyear .right_content{
+    overflow: hidden;
+}
+.public_lawyear .right_content .top_lawyear_slider{
+    overflow: hidden;
+    height: 500px !important;
+}
+.public_lawyear .right_content .top_lawyear_slider .carousel-control-next {
+	top: 80.5%;
+	background-color: #f7941d;
+	opacity: 1;
+	width: 65px;
+	height: 65px;
+}
+.public_lawyear .right_content .top_lawyear_slider .carousel-control-prev{
+    top: 80.5%;
+    left: 85.5%;
+    width: 65px;
+    height: 65px;
+    background-color: #f7941d;
+    opacity: 1;
+}
+.public_lawyear .right_content .top_lawyear_slider .carousel-control-next:hover{
+    background-color: #2a2d71;
+}
+.public_lawyear .right_content .top_lawyear_slider .carousel-control-prev:hover{
+    background-color: #2a2d71;
+}
+.public_lawyear .right_content .top_lawyear_slider .carousel-control-next.active{
+    background-color: #2a2d71;
+}
+.public_lawyear .right_content .lawfirm_about{
+    overflow: hidden;
+    padding-top: 42px;
+}
+.public_lawyear .right_content .lawfirm_about h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-bottom: 23px;
+    position: relative;
+    border-bottom: 1px solid #e9e9e9;
+    font-family: 'Gotham-Black';
+}
+.public_lawyear .right_content .lawfirm_about h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+.public_lawyear .right_content .lawfirm_about p{
+    padding-top: 30px;
+    font-size: 15px;
+    color: #575757;
+    font-family: 'Gotham-Book';
+    text-align: left;
+    padding-bottom: 21px;
+    line-height: 28px;
+}
+.public_lawyear .right_content .lawfirm_about p:last-child{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.public_lawyear .right_content .spec{
+    margin-top: 50px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    padding: 25px 24px 43px 28px;
+    
+}
+.public_lawyear .right_content .spec h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e9e9e9;
+    font-family: 'Gotham-Black';
+    position: relative;
+}
+.public_lawyear .right_content .spec h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+.public_lawyear .right_content .spec ul{
+    padding-top: 30px;
+}
+.public_lawyear .right_content .spec ul li{
+    float: left;
+    width: 32%;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #575757;
+    font-family: 'Gotham-Medium';
+    margin-bottom: 18px;
+}
+.public_lawyear .right_content .spec ul li img{
+    float: left;
+    margin-right: 10px;
+}
+.public_lawyear .right_content .awards{
+    margin-top: 25px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    padding: 25px 24px 43px 28px;
+    
+}
+.public_lawyear .right_content .awards h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 23px;
+    position: relative;
+    font-family: 'Gotham-Black';
+}
+.public_lawyear .right_content .awards h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+.public_lawyear .right_content .awards .awards_list{
+    overflow: hidden;
+}
+.public_lawyear .right_content .awards .awards_list ul{
+    
+}
+.public_lawyear .right_content .awards .awards_list ul li{
+    padding: 34px 24px 30px 12px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 30px;
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_logo{
+    float: left;
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_logo img{
+    float: left;
+    width: auto;
+    height: auto;
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_content{
+    padding-left: 44px;
+    overflow: hidden;
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_content h4{
+    font-size: 19px;
+    color: #2a2d71;
+    text-align: left;
+    padding: 12px 0;
+    font-family: 'Gotham-Black';
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_content span{
+    font-size: 14px;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    color: #ffa63a;
+    padding-bottom: 22px;
+}
+.public_lawyear .right_content .awards .awards_list ul li .awards_content p{
+    font-size: 15px;
+    color: #575757;
+    text-align: left;
+    font-family: 'Gotham-Book';
+    line-height: 27px;
+}
+.public_lawyear .right_content .you_tube{
+    overflow: hidden;
+    margin-top: 25px;
+    height: 430px;
+}
+.public_lawyear .right_content .you_tube iframe{
+    width: 100%;
+    height: 100%;
+}
+.public_lawyear .right_content .law_firm_event{
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    margin-top: 25px;
+    padding: 26px 25px 36px 30px;
+    
+}
+.public_lawyear .right_content .law_firm_event h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e9e9e9;
+    font-family: 'Gotham-Black';
+    position: relative;
+}
+.public_lawyear .right_content .law_firm_event h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+.public_lawyear .right_content .law_firm_event .law_event_image{
+    float: left;
+    margin-right: 40px;
+    margin-top: 30px;
+    height: auto;
+    overflow: hidden;
+}
+.public_lawyear .right_content .law_firm_event .law_event_image img{
+    width: 100%;
+    height: auto;
+}
+.public_lawyear .right_content .law_firm_event .law_event_content{
+    overflow: hidden;
+}
+.public_lawyear .right_content .law_firm_event .law_event_content h4{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-top: 38px;
+    padding-bottom: 23px;
+    font-family: 'Gotham-Black';
+}
+.public_lawyear .right_content .law_firm_event .law_event_content p{
+    font-family: 'Gotham-Book';
+    font-size: 15px;
+    color: #575757;
+    line-height: 27px;
+    text-align: left;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear{
+    margin-top: 37px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #e9e9e9;
+    font-family: 'Gotham-Black';
+    position: relative;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider{
+    margin-top: 25px;
+}
+
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev{
+    color: transparent !important;
+    left: 88%;
+    border: 0px;
+    position: absolute;
+    top: -13.5%;
+    width: 0px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider:hover.slick-prev::befor{
+    color: red;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev:focus{
+    background-color: transparent !important;
+    border: 0px !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next:focus{
+    background-color: transparent !important;
+    border: 0px !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev::before{
+    color: #9e9e9e;
+    font-size: 40px;
+    opacity: 1 !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next::before{
+    color: #9e9e9e;
+    font-size: 40px;
+    opacity: 1 !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next{
+    top: -11%;
+    right: 3%;
+    border: 0px !important
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next:hover{
+    background: transparent !important;
+    color: #2a2d71 !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next::before:hover{
+    color: #2a2d71 !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev:hover{
+    background: transparent !important;
+    color: #2a2d71 !important;
+    font-size: 0px;
+    border: 0px !important;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev::before{
+    content: "";
+    font-family: 'FontAwesome5Free-Solid';
+    font-size: 18px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next::before{
+    content: "";
+    font-family: 'FontAwesome5Free-Solid';
+    font-size: 18px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-prev:hover::before{
+    color: #2a2d71 !important;
+    top: 3px;
+    position: absolute;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider .slick-next:hover::before{
+    color: #2a2d71 !important;
+}
+
+
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul{
+    margin-top: 25px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul  li{
+    width: 270px !important;
+    margin-right: 15px;
+    float: left;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li  .select_lawyear{
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 8px 0 rgba(195, 195, 195, 0.2), 0 6px 20px 0 rgba(195, 195, 195, 0.19);
+    height: 360px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .yellow_lawyear{
+    /*background-image: url(../images/yellow_box_two.png);
+    background-repeat: no-repeat;
+    background-position: right top;*/
+    height: auto;
+    position: relative;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .yellow_lawyear .gry_lawyear {
+	/*clip-path: polygon(64.00% 64.90%, 0px 53.03%, 0px 0px, 100% 0px, 100% 50.49%);
+	background-color: #c3c3c3;*/
+	height: 280px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .yellow_lawyear .gry_lawyear img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .lawyear_con{
+    overflow: hidden;
+    margin-top: -80px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .lawyear_con h6{
+    text-align: center;
+    color: #2a2d71;
+    font-family: 'Gotham-Black';
+    font-size: 21px;
+    padding-bottom: 15px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li  .select_lawyear .lawyear_con p{
+    text-align: center;
+    color: #818181;
+    font-size: 15px;
+    font-family: 'ProximaNova-Regular';
+    padding-bottom: 18px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li .select_lawyear .lawyear_con span{
+    text-align: center;
+    margin: 0px auto;
+    display: table;
+    font-size: 12px;
+    font-family: 'Gotham-Medium';
+    text-transform: uppercase;
+    color: #f5931d;
+    border: 2px solid #f5931d;
+    padding: 1.5px 16px;
+    margin-bottom: 30px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li a{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: block;
+    background-color: #2a2d71;
+    margin: 0px auto;
+    margin-top: -22px;
+}
+.public_lawyear .right_content .law_firm_bottom_lawyear .bottom_lawyear_slider ul li a img{
+    padding: 15px;
+}
+
+
+/*** Law Firm _public Profile inner page end ***/
+
+/*** Lawyear Public Profile inner page start ***/
+
+.banner.lawyear_public_profile{
+    background-image: url(../images/redesign_images/lawyer_public_profile_inner_bg_updated.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    overflow: hidden;
+}
+.banner.lawyear_public_profile .banner_cap .left_side_con a.familylaw{
+    text-align: center;
+    margin-left: 30px;
+    font-family: 'Gotham-Black';
+    font-size: 14px;
+    color: #f7941d;
+    border: 1px solid #f7941d;
+    padding: 3.5px 7px;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    transition: 0s;
+}
+.banner.lawyear_public_profile .banner_cap .left_side_con a:hover.familylaw{
+    transform: none;
+}
+
+.banner.lawyear_public_profile .banner_cap .left_side_con h1 {
+	font-size: 53px;
+	padding-bottom: 52px;
+	padding-top: 20px;
+	padding-left: 30px;
+	font-family: 'Gotham-Black';
+	line-height: 0px;
+}
+.banner.lawyear_public_profile .banner_cap .left_side_con ul {
+	padding-bottom: 179px;
+	padding-left: 30px;
+}
+.banner.lawyear_public_profile .banner_cap .left_side_con ul li {
+	float: left;
+	margin-right: 8px;
+	font-size: 16px;
+	color: #f7941d;
+}
+.banner.lawyear_public_profile .banner_cap .left_side_con ul li {
+	font-size: 24px;
+	color: #f7941d;
+}
+.public_lawyear .left_content .top_con_tact .top_lawfirm_logo.publicprofile_lawyear{
+    overflow: hidden;
+    text-align: center;
+    height: 240px;
+}
+.public_lawyear .left_content .top_con_tact .top_lawfirm_logo.publicprofile_lawyear img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.public_lawyear .left_content .top_con_tact .shape.lawyear_Shap{
+    margin-top: -111px;
+}
+.public_lawyear .left_content .top_con_tact .shape .top_clippy .public_contact_info ul li span.NY{
+    width: 100%;
+    font-size: 13px;
+}
+.public_lawyear .right_content .lawfirm_about.lawYear_profile{
+    padding-top: 0px;
+}
+.public_lawyear .right_content .lawfirm_about p span{
+    color: #575757;
+    font-family: 'Gotham-Medium';
+}
+.public_lawyear .right_content .lawfirm_about p.lawyear_pra{
+    padding-bottom: 27px;
+}
+.public_lawyear .right_content .lawfirm_about p.lawyear_pra_gap{
+    padding-top: 0px;
+    margin-top: -18px !important;
+}
+.public_lawyear .right_content .lawfirm_about p.lawyear_pra_gap:last-child{
+    width: 98%;
+}
+.public_lawyear .right_content .law_firm_event p.appointment{
+    font-size: 15px;
+    color: #575757;
+    font-family: 'Gotham-Book';
+    padding-top: 30px;
+}
+.public_lawyear .right_content .qulification{
+    overflow: hidden;
+    margin-top: 47px;
+    border: 1px solid #f1eae2;
+    padding: 28px 24px 55px 27px;
+}
+.public_lawyear .right_content .qulification h5{
+    font-size: 20px;
+    text-align: left;
+    color: #2a2d71;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #f5ece0;
+    font-family: 'Gotham-Black';
+    position: relative;
+}
+.public_lawyear .right_content .qulification h5::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background-color: #2a2d71;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.quli th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.quli{
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+    margin: 40px 0 0 0;
+}
+.quli tbody{
+    float: left;
+    width: 50%;
+}
+.quli td {
+    font-size: 15px;
+    color: #373737;
+    font-family: 'Gotham-Black';
+}
+.quli td.change_font{
+    font-family: 'Gotham-Book';
+    border-left: none;
+}
+
+.quli td, .quli th {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 55%;
+    padding-left: 25px;
+    border-left: 1px solid #f2ebe3;
+}
+
+/* Background-color of the odd rows */
+.quli tr:nth-child(odd) {
+	  background-color: #fff;
+    border-bottom: 1px solid #f2ebe3;
+    padding: 5% 0;
+}
+
+/* Background-color of the even rows */
+.quli tr:nth-child(even) {
+	  background-color: #fff;
+    border-bottom: 1px solid #f2ebe3;
+    padding: 5% 0;
+}
+
+
+.quli td:first-child { 
+    color: #373737;
+}
+.quli td.male{
+    padding-top: 10.8%;
+}
+.quli td.law_office{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.quli td.practice_course{
+    padding-bottom: 10.5%;
+}
+.quli tr.practice_border{
+    border-bottom: none;
+}
+.quli tr.language_border{
+    border-bottom: none;
+}
+.quli tbody .gender_left_border{
+    border-left: none;
+}
+.quli td.bs{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.quli td.law_dgree{
+    padding-bottom: 7.5%;
+    padding-top: 8%;
+}
+
+
+@media (max-width: 800px) {
+.quli td:nth-child(4),
+.quli th:nth-child(4) { display: none; }
+}
+
+
+/*** Lawyear Public Profile inner page end ***/
+
+
+/*** Lawyear Listing inner page start ***/
+
+.banner.listing_lawyear_bg{
+    background-image: url(../images/redesign_images/lawyer_listing_inner_bg_updated.png);
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.banner.listing_lawyear_bg .banner_cap .left_side_con h1{
+    padding-bottom: 209px;
+    padding-top: 220px;
+    padding-left: 30px;
+}
+.lawyear_listing{
+    overflow: hidden;
+    margin-top: 35px;
+}
+.lawyear_listing .sort_by{
+    overflow: hidden;
+    float: right;
+    width: 27%;
+}
+.lawyear_listing .sort_by p{
+    text-align: left;
+    font-size: 13px;
+    color: #9c9c9c;
+    font-family: 'Gotham-Black';
+    display: inline-block;
+    padding: 6px 0;
+}
+.lawyear_listing .sort_by .sort_by_chose{
+    float: right;
+    border: 1px solid #e8e8e8;
+    background-color: transparent;
+    width: 172px;
+    padding: 5.5px 0;
+}
+.lawyear_listing .sort_by .sort_by_chose .select::after{
+    content: "";
+    font-family: 'FontAwesome5Free-Solid';
+}
+.lawyear_listing .sort_by .sort_by_chose select{
+    font-size: 13px;
+    color: #a2a2a2;
+    font-family: 'Gotham-Book';
+}
+.lawyear_listing .sort_by .sort_by_chose select option value{
+    font-family: 'Gotham-Book';
+}
+.lawyear_listing .lawyear_listing_chose{
+    margin-top: 35px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear{
+    border: 1px solid #e6e6e6;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg{
+    /*background-image: url(../images/listing_lawyear_yellow_bg.png);
+    background-repeat: no-repeat;*/
+    height: auto;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg .lawyear_shapE{
+    /*clip-path: polygon(45.18% 99.24%, 0px 76.48%, 0px 0px, 100% 0px, 100.01% 77.69%);
+    background-color: #c3c3c3;*/
+    overflow: hidden;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg .lawyear_shapE img{
+    width: auto;
+    height: auto;
+    margin-left: -50px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg .lawyear_shapE img.change_position_lawyear{
+    margin-left: -50px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail{
+    padding-top: 32px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail h5{
+    font-size: 21px;
+    text-align: center;
+    color: #2a2d71;
+    font-family: 'Gotham-Black';
+    padding-bottom: 23px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail .lawyear_splist{
+    margin: 0px auto;
+    display: table;
+    border: 2px solid #f5931d;
+    font-size: 12px;
+    color: #f5931d;
+    text-align: center;
+    padding: 1.5px 15.1px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Medium';
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail p{
+    text-align: center;
+    padding-top: 22px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'ProximaNova-Regular';
+    line-height: 23px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail span{
+    font-size: 16px;
+    color: #565656;
+    text-align: center;
+    font-family: 'ProximaNova-Bold';
+    display: block;
+    padding-bottom: 30px;
+}
+.lawyear_listing .lawyear_listing_chose a{
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 25px 0px rgba(76,76,76,0.29);
+    background-color: #2a2d71;
+    display: block;
+    margin: 0px auto;
+    margin-top: -20px;
+}
+.lawyear_listing .lawyear_listing_chose a img{
+    padding: 15px;
+}
+.lawyear_listing .lawyear_listing_chose .bottom_gap{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/*** Listing Lawyear inner page end ***/
+
+
+
+/*** Registration inner page start ***/
+
+.banner.reg_inner_bg{
+    overflow: hidden;
+    background-image: url(../images/redesign_images/registration_inner_bg_updated.png) !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+}
+.banner.reg_inner_bg .banner_cap .left_side_con h1{
+    font-size: 55px;
+    padding-bottom: 155px;
+    padding-top: 280px;
+    padding-left: 30px;
+}
+.legal .legal_3box .legal_box.reg_legal{
+    background-color: #e7e6f7 !important;
+    background: none;
+}
+.legal .legal_3box .legal_box.reg_bgcolor_two{
+    background-color: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f6ebde+0,f7efe4+100 */
+    background: #f6ebde; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #f6ebde 0%, #f7efe4 100%) !important; /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #f6ebde 0%,#f7efe4 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #f6ebde 0%,#f7efe4 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6ebde', endColorstr='#f7efe4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.legal .legal_3box .legal_box.reg_bgcolor_three{
+    background-color: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d6f1e8+0,ddf3ec+100 */
+    background: #d6f1e8; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #d6f1e8 0%, #ddf3ec 100%) !important; /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #d6f1e8 0%,#ddf3ec 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #d6f1e8 0%,#ddf3ec 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f1e8', endColorstr='#ddf3ec',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.legal .legal_3box .legal_box .legal_bg.reg_nobg{
+    background-image: none;
+}
+.legal .legal_3box .legal_box.reg_legal h5{
+    color: #2a2d71 !important;
+}
+.legal .legal_3box .legal_box.reg_legal h4{
+    color: #2a2d71;
+}
+.legal .legal_3box .legal_box.reg_legal p{
+    color: #7274a4;
+}
+.legal .legal_3box .legal_box .legal_bg .leg_box.reg_lawyear{
+    color: #a78f72;
+}
+.legal .legal_3box .legal_box .legal_bg .leg_box.reg_clients{
+    color: #6ba794;
+}
+
+.legal .reg_dash_one{
+    position: relative;
+}
+.legal .reg_dash_two{
+    position: relative;
+}
+.legal .reg_dash_three{
+    position: relative;
+}
+.legal .reg_dash_one::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_one.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    right: 29%;
+    top: 45%;
+}
+.legal .reg_dash_one::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_one.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    left: 29%;
+    top: 45%;
+}
+.legal .reg_dash_two::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_two.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    right: 29%;
+    top: 45%;
+}
+.legal .reg_dash_two::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_two.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    left: 29%;
+    top: 45%;
+}
+.legal .reg_dash_three::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_three.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    right: 29%;
+    top: 45%;
+}
+.legal .reg_dash_three::after{
+    position: absolute;
+    content: "";
+    background-image: url(../images/reg_dash_effcet_three.jpg);
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 1px;
+    left: 29%;
+    top: 45%;
+}
+
+/*** Registration inner page end ***/
+
+
+/*** Legalfirms , Lawyers , Clients Registration inner page start ***/
+
+.banner.reg_inner_bg .banner_cap .left_side_con h1.legal_reg{
+    width: 42%;
+    padding-top: 270px;
+    padding-bottom: 136px;
+    font-size: 55px;
+}
+.outer_info{
+    margin-top: 75px;
+    overflow: hidden;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #efefef;
+}
+.outer_info .user_info{
+    overflow: hidden;
+    margin: 0px 96px 30px 94px;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    background-color: #fbfbfb;
+}
+.outer_info .user_info .user_info_top_header{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d71+0,4f3c8b+100 */
+    background: #2a2d71; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d71 0%, #4f3c8b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d71 0%,#4f3c8b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d71 0%,#4f3c8b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#4f3c8b',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 30px;
+}
+.outer_info .user_info .user_info_top_header h3{
+    padding: 16px 0 16px 27px;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Gotham-Black';
+    color: #fff;
+}
+.outer_info .user_info .user_form{
+    padding: 0 48px;
+}
+.outer_info .user_info .user_form label{
+    font-size: 16px;
+    text-align: left;
+    color: #898989;
+    font-family: 'Gotham-Black';
+    padding-bottom: 22px;
+    margin-bottom: 0px;
+    display: block;
+}
+.outer_info .user_info .user_form label i{
+    color: #ff0000;
+    font-size: 8px;
+}
+.outer_info .user_info .user_form input[type="text"]{
+    border: 1px solid #cacaca;
+    width: 100%;
+    font-size: 15px;
+    color: #9c9b9b;
+    font-family: 'Gotham-Book';
+    padding: 18px 10px 18px 25px;
+    margin-bottom: 32px;
+    outline: none;
+    text-transform: capitalize;
+}
+.outer_info .user_info .user_form input[type="email"]{
+    border: 1px solid #cacaca;
+    width: 100%;
+    font-size: 15px;
+    color: #9c9b9b;
+    font-family: 'Gotham-Book';
+    padding: 18px 10px 18px 25px;
+    margin-bottom: 32px;
+    outline: none;
+}
+.outer_info .user_info .user_form input[type="password"]{
+    border: 1px solid #cacaca;
+    width: 100%;
+    font-size: 15px;
+    color: #9c9b9b;
+    font-family: 'Gotham-Book';
+    padding: 18px 10px 18px 25px;
+    margin-bottom: 32px;
+    outline: none;
+}
+.outer_info .user_info .user_form .select{
+    position: relative;
+    width: 100%;
+}
+.outer_info .user_info .user_form .select::after {
+	content: "";
+	position: absolute;
+	top: 18px;
+	right: 0;
+	padding: 0 1em;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+	color: #898989;
+    font-family: 'FontAwesome5Free-Solid';
+}
+.outer_info .user_info .user_form .select select{
+    border: 1px solid #cacaca !important;
+    width: 100%;
+    font-size: 15px;
+    color: #9c9b9b;
+    font-family: 'Gotham-Book';
+    padding: 18px 10px 18px 25px;
+    margin-bottom: 32px;
+    outline: none;
+}
+.outer_info .payment_info{
+    overflow: hidden;
+    margin: 0px 96px 0px 94px;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    background-color: #fbfbfb;
+}
+.outer_info .payment_info .user_info_top_header {
+	background: -moz-linear-gradient(left, #2a2d71 0%, #4f3c8b 100%);
+	background: -webkit-linear-gradient(left, #2a2d71 0%,#4f3c8b 100%);
+	background: linear-gradient(to right, #2a2d71 0%,#4f3c8b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d71', endColorstr='#4f3c8b',GradientType=1 );
+	margin-bottom: 30px;
+}
+.outer_info .payment_info .user_info_top_header h3{
+    padding: 16px 0 16px 27px;
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    font-family: 'Gotham-Black';
+}
+.outer_info .payment_info .final_payment{
+    padding: 50px 48px 0 48px;
+}
+
+.all_price_tab ul li.silver{
+
+}
+.all_price_tab li.gold{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7941d+0,f7821e+100 */
+    background: #f7941d; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #f7941d 0%, #f7821e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #f7941d 0%,#f7821e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #f7941d 0%,#f7821e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7941d', endColorstr='#f7821e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.all_price_tab li.diamond{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3cc492+0,3db7b1+100 */
+    background: #3cc492; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #3cc492 0%, #3db7b1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #3cc492 0%,#3db7b1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #3cc492 0%,#3db7b1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3cc492', endColorstr='#3db7b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.all_price_tab li.silver{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d72+0,44367b+100 */
+    background: #2a2d72; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #2a2d72 0%, #44367b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #2a2d72 0%,#44367b 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #2a2d72 0%,#44367b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d72', endColorstr='#44367b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+.outer_info .payment_info .final_payment .total_payble{
+    padding-top: 45px;
+}
+.outer_info .payment_info .final_payment .total_payble p{
+    font-size: 16px;
+    color: #898989;
+    font-family: 'Gotham-Black';
+    padding-bottom: 45px;
+}
+.outer_info .payment_info .final_payment .total_payble p:last-child{
+    padding-bottom: 65px;
+}
+.outer_info .payment_info .final_payment .total_payble p span{
+    padding-left: 140px;
+    font-size: 19px;
+    color: #898989;
+}
+.outer_info .payment_info .final_payment .total_payble p span.fi_nal{
+    padding-left: 165px;
+    color: #2a2d72;
+}
+
+.all_price_tab .active_price a, .federal_tabs-menus li:hover a{
+    color: #fff;
+    
+}
+.all_price_tab .active_price a, .federal_tabs-menus li:hover a {
+	border: 2px solid #4b361e;
+    background-image: url(../images/legalfirm_reg_hover.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.all_price_tab li::after, .federal_tabs-menus li:hover a{
+    position: absolute;
+    content: "";
+    background-image: url(../images/legalfirm_reg_hover.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 29px;
+    height: 29px;
+    right: -8px;
+    top: -8px;
+    visibility: hidden;
+}
+.all_price_tab li, .federal_tabs-menus li:hover a::after{
+    visibility: visible;
+}
+.all_price_tab{
+    display: block;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.all_price_tab li{
+    display: inline-block;
+    margin-right: 30px;
+    width: 23.3%;
+    position: relative;
+}
+.all_price_tab li:last-child{
+    margin-right: 0px;
+}
+.all_price_tab li a{
+    text-align: center;
+    padding: 37.5px 0;
+    color: #fbfbfb;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Gotham-Black';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all_price_tab li:first-child{
+    vertical-align: top;
+    width: 16%;
+}
+.all_price_tab li h5{
+    font-family: 'Gotham-Black';
+    font-size: 16px;
+    color: #898989;
+}
+.price_match_tab{
+    width: 100%;
+}
+#silver{
+    display: block;
+}
+.price_content_active {
+    display: none;
+    /* padding: 70px 0; */
+    float: none;
+    width: auto;
+    margin-top: 0;
+}
+.accpet{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 42px;
+}
+.accpet span{
+    color: #727272;
+    font-size: 14px;
+    font-family: 'Gotham-Book';
+}
+.accpet span a{
+    text-decoration: underline !important;
+    color: #727272;
+}
+.accpet input[type="checkbox"]{
+    width: 21px;
+    height: 20px;
+    border: 1px solid #d7d7d7;
+    vertical-align: middle;
+}
+.accpet input[type="submit"]{
+    border-radius: 2px;
+    background-color: #f7941d;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-align: center;
+    padding: 16px 84.3px;
+    margin: 0px auto;
+    margin-top: 30px;
+    display: flex;
+    outline: none;
+    border: 0px;
+}
+.accpet input[type="submit"]:hover{
+    background-color: #2a2d71;
+    transition: 0.5s;
+}
+
+
+
+/*** Legalfirms , Lawyers , Clients Registration inner page end ***/
+
+/************************
+    Dashboard CSS Start
+************************/
+
+
+/*************************************
+    Account Setting Dashboard start
+**************************************/
+
+.banner.account_setting_dashboard{
+    background-image: url(../images/account_setting_dashboard_bg.png);
+    background-position: center center;
+}
+.banner.account_setting_dashboard .banner_cap .left_side_con h1{
+    font-size: 55px;
+    padding-left: 30px;
+    padding-top: 260px;
+    padding-bottom: 135px;
+}
+.account{
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    margin: 100px 30px 0;
+}
+.account .account_left{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2b2d6f+0,302c68+100 */
+    background: #2b2d6f; /* Old browsers */
+    background: -moz-linear-gradient(top,  #2b2d6f 0%, #302c68 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #2b2d6f 0%,#302c68 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #2b2d6f 0%,#302c68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2d6f', endColorstr='#302c68',GradientType=0 ); /* IE6-9 */
+    height: 100%;
+}
+.account .account_left img{
+    float: left;
+    padding-right: 14px;
+}
+.account .account_left .top_acro{
+    padding: 15px;
+}
+
+
+.account .account_left ul li a{
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+    color: #fff;
+}
+
+/****************** upload your profile picture start ******************/
+
+.upload{
+    overflow: hidden;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 25px;
+}
+.upload img{
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    padding-right: 0px !important;
+}
+.upload input[type=file]{
+    padding:10px;
+}
+.upload img.upload_img{
+    width: auto;
+    height: auto;
+    margin-top: 20%;
+    margin-left: -7%;
+}
+
+
+
+
+
+
+
+.profile-user-img{
+  width: 125px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.avatar-upload {
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.avatar-upload.left_top_fix_logo{
+    margin-bottom: 0px;
+}
+.avatar-upload .avatar-edit input + label {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	margin-bottom: 0;
+	border-radius: 100%;
+	background: #f7941d;
+	border: 2px solid #fff;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	font-weight: normal;
+	transition: all .2s ease-in-out;
+}
+.avatar-upload .avatar-edit input + label::after {
+	content: "";
+	font-family: 'FontAwesome5Free-Solid';
+	color: #337AB7;
+	position: absolute;
+	text-align: center;
+	line-height: 34px;
+	margin: auto;
+    background-image: url(../images/upload_updated.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 15px;
+    height: 13px;
+    padding: 15px 17px;
+}
+.avatar-upload .avatar-edit input {
+	display: none;
+}
+.camera{
+    margin-left: 85px;
+    margin-top: 38px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+/****************** upload your profile picture end ********************/
+
+/*************** user name & email sec start *************/
+
+.user {
+	overflow: hidden;
+	margin-left: 30px;
+	margin-right: 15px;
+	border-bottom: 1px solid #464998;
+}
+.user span{
+    font-size: 15px;
+    color: #f7941d;
+    text-transform: capitalize;
+    font-family: 'Gotham-Book';
+    padding-bottom: 11px;
+    display: flex;
+}
+.user strong{
+    font-size: 23px;
+    color: #fbfbfb;
+    font-family: 'Gotham-Black';
+    padding-bottom: 10px;
+    display: flex;
+}
+.user p{
+    font-family: 'Gotham-Medium';
+    font-size: 14px;
+    color: #fafafa;
+    line-height: 23px;
+    padding-bottom: 25px;
+    width: 72%;
+}
+.user p a{
+    color: #f7941d;
+}
+.left_fix_email{
+    overflow: hidden;
+    padding: 25px 0 20px 30px;
+}
+.left_fix_email ul li{
+    text-align: left;
+}
+.left_fix_email ul li a{
+    font-size: 14px !important;
+    color: #fbfbfb;
+    font-family: 'Gotham-Medium' !important;
+}
+.left_fix_email ul li a img{
+    float: left;
+    padding-right: 15px;
+    padding-top: 6px;
+}
+.left_fix_email ul li:hover a{
+    color: #f7941d;
+}
+
+/*************** user name & email sec end **************/
+
+/********* Table sec start ***********/
+
+.account .table_bg{
+    overflow: hidden;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fa9926+0,f89621+100 */
+    background: #fa9926; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #fa9926 0%, #f89621 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #fa9926 0%,#f89621 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #fa9926 0%,#f89621 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa9926', endColorstr='#f89621',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin: 30px 0 0;
+}
+.account .account_left .table_bg h3{
+    font-size: 17px;
+    color: #ffffff;
+    font-family: 'Gotham-Black';
+    padding-top: 27px;
+    padding-left: 30px;
+    padding-bottom: 23px;
+}
+
+.account .account_left .table_sec_one {
+	border-bottom: 1px solid #feae50;
+	overflow: hidden;
+	margin: 0 15px 20px 30px;
+}
+.account .account_left .table_sec_one .sub_table{
+    width: 52%;
+    float: left;
+    border-right: 1px solid #feae50;
+    padding-right: 10px;
+}
+.account .account_left .table_sec_one .sub_table:nth-child(2n){
+    border-right: 0px;
+    width: 48%;
+    padding-right: 0px;
+}
+.account .account_left .table_sec_one .sub_table p{
+    padding-left: 0px;
+    display: block;
+    color: #2a2d71;
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+}
+.account .account_left .table_sec_one .sub_table:nth-child(2n) p{
+    padding-left: 13px;
+}
+.account .account_left .table_sec_one .sub_table span{
+    font-size: 13px;
+    color: #2e2e2e;
+    font-family: 'Gotham-Medium';
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: block;
+}
+.account .account_left .table_sec_one .sub_table:first-child span{
+    padding-left: 0px;
+}
+.account .account_left .table_sec_one .sub_table:nth-child(2n) span{
+    padding-left: 13px;
+}
+.account .account_left .table_sec_one.table_sec_two{
+    border-bottom: 0px;
+    margin: -22px 15px 20px 30px;
+}
+.account .account_left .table_sec_one .sub_table.sub_table_two{
+    padding-top: 17px;
+}
+
+/********* Table sec end ***********/
+
+.account .account_left .left_dash_social{
+    overflow: hidden;
+    margin: 48px auto;
+    display: table;
+}
+.account .account_left .left_dash_social ul li{
+    float: left;
+    margin-right: 7px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    padding: 0px;
+    border: 1px solid #565092;
+}
+.account .account_left .left_dash_social ul li:last-child{
+    margin-right: 0px;
+}
+.account .account_left .left_dash_social ul li a i{
+    color: #fff;
+    padding: 14px 18px;
+    transition-delay: 0.5s;
+}
+.account .account_left .left_dash_social ul li a i.tw{
+    padding: 14px 15px;
+}
+.account .account_left .left_dash_social ul li:hover{
+    background-color: #ffa63a;
+    border: 1px solid #ffa63a;
+    transition: 0.5s;
+}
+
+
+
+
+/***********/
+
+
+.accordion {
+    width: 100%;
+}
+.account .account_left
+
+.accordion-header {
+  
+}
+.account .account_left .accordion-header{
+    cursor: pointer;
+}
+.accordion__item .accordion-header a{
+    color: #fbfbfb ;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all .3s;
+  text-transform: capitalize;
+    font-family: 'Gotham-Black';
+}
+.accordion__item .accordion-header h5{
+    color: #fbfbfb ;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all .3s;
+  text-transform: capitalize;
+    font-family: 'Gotham-Black';
+    display: inline;
+}
+
+.accordion__item {
+	border-bottom: 1px solid #3a4ba4;
+	padding-bottom: 21px;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+.accordion__item.acc_bottom{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+.accordion__item.accordion__item_inner{
+    border-bottom: 0px;
+}
+.accordion__item.sub_lawyer{
+    padding: 10px 0 0 12px;
+}
+
+.accordion-header:hover {
+  position: relative;
+  z-index: 5;
+}
+
+.accordion-body {
+  display: none;
+}
+
+.accordion-body__contents {
+  padding: 1.5em 1.5em;
+  font-size: .85em;
+}
+
+.accordion__item.active:last-child .accordion-header {
+  border-radius: none;
+}
+
+
+.accordion__item > .accordion-header:after {
+    content: "";
+    font-family: 'FontAwesome5Free-Solid';
+    font-size: 1.2em;
+    float: right;
+    position: relative;
+    top: -2px;
+    transition: .3s all;
+    transform: rotate(0deg);
+    color: #fb9d2b;
+}
+.accordion__item > .accordion-header.no_arrow::after{
+    content: "";
+}
+
+.accordion__item.active > .accordion-header:after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item .accordion__item .accordion-header {
+  color: #353535;
+}
+.accordion__item .accordion-header a.blank_link{
+    font-size: 14px;
+    line-height: 25px;
+    color: #afb2e2;
+    font-family: 'Gotham-Medium';
+    text-transform: capitalize;
+    padding-left: 20px;
+}
+.accordion__item .accordion-header a.blank_link.active_lawyer{
+    color: #fb9d2b;
+}
+.accordion__item .accordion-header a.blank_link::after{
+    content: "";
+}
+.accordion__item .accordion-header:hover a{
+    color: #fb9d2b;
+}
+.accordion__item .accordion-header a.active_main{
+    color: #fb9d2b;
+}
+
+
+
+.account .account_left .sign_out{
+    border-bottom: 1px solid #3a4ba4;
+    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-left: 12px;
+}
+.account .account_left .sign_out a{
+    color: #fbfbfb;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s;
+    text-transform: capitalize;
+    font-family: 'Gotham-Black';
+}
+.account .account_left a.sign_out img{
+    float: left;
+    padding-right: 14px;
+}
+
+/***********/
+
+
+.account .account_right{
+    padding: 0 45px 60px 20px;
+}
+.account .account_right h2{
+    padding-top: 48px;
+    font-size: 33px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
+    text-transform: capitalize;
+}
+.account .account_right h2::after{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: #2b2d70;
+    bottom: 0;
+    left: 0;
+}
+.account .account_right .profile{
+    padding-top: 34px;
+}
+.account .account_right .profile .profile_header{
+    background-color: #f6efe7;
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 36px;
+}
+.account .account_right .profile .profile_header h5{
+    font-size: 21px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    padding: 10.4px 0;
+}
+.account .account_right .ri_ght{
+    padding-right: 12px;
+    padding-left: 15px;
+}
+.account .account_right .le_ft{
+    padding-left: 0px;
+    padding-right: 15px;
+}
+.account .account_right .re{
+    padding-right: 15px;
+}
+.account .account_right .profile label{
+    color: #898989;
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+}
+.account .account_right .profile input[type="text"]{
+    font-size: 15px;
+    color: #bababa;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 10px 18px 26px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.account .account_right .profile input[type="email"]{
+    font-size: 15px;
+    color: #bababa;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 10px 18px 26px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.account .account_right .profile textarea{
+    font-size: 15px;
+    color: #bababa;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 10px 18px 26px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 55px;
+}
+.account .account_right .profile input[type="password"]{
+    font-size: 15px;
+    color: #bababa;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 10px 18px 26px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.account .account_right .profile .profile_header.social_header{
+    margin-bottom: 55px;
+}
+.account .account_right .profile a{
+    border-radius: 2px;
+    background-color: #f7941d;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Gotham-Black';
+    padding: 16.5px 52px;
+    color: #fff;
+}
+.account .account_right .profile .hvr-sweep-to-right::before{
+    background-color: #392a5a
+}
+.tell_me{
+    padding: 0 15px 0 15px !important;
+}
+
+/*************************************
+    Account Setting Dashboard end
+**************************************/
+
+/************************************
+    Add New Client Dashboard start
+************************************/
+
+.account .account_right .profile .client_logo{
+    overflow: hidden;
+    
+}
+.account .account_right .profile .client_logo h5{
+    font-size: 16px;
+    color: #898989;
+    font-family: 'Gotham-Black';
+    text-align: left;
+    padding-bottom: 17px;
+}
+.account .account_right .profile .client_logo .client_iamge{
+    /*overflow: hidden;*/
+    margin-bottom: 50px;
+    display: flex;
+}
+.account .account_right .profile .client_logo .client_iamge img{
+    width: 352px;
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid #e1e1e1;
+    float: left;
+}
+.client_profile {
+	position: absolute;
+	margin-top: 72%;
+	margin-left: 78%;
+	z-index: 1;
+    float: right;
+}
+.avatar-upload .avatar-edit input + label.round_plus{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #ffa63a;
+    border: 0px;
+}
+
+.avatar-upload .avatar-edit input + label.round_plus::after{
+    background-image: url(../images/add_client_plus_icon.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    padding: 25px 25px;
+    border: 0px;
+    background-position: center center;
+}
+.account .account_right .profile .select_modify{
+    font-size: 15px;
+    color: #bababa;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 10px 18px 26px;
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.select.select_modify::after {
+	content: '';
+	position: absolute;
+	top: 27px;
+	right: 20px;
+	padding: 0;
+	cursor: pointer;
+	pointer-events: none;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+	color: #777777;
+    background-image: url(../images/select_new_lawyer.png);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 8px;
+}
+select.fonts_change{
+    font-family: 'Gotham-Book';
+    color: #bababa;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.account .account_right .profile textarea.client_textarea{
+    min-height: 140px;
+    margin-bottom: 30px;
+}
+.account .account_right .profile .add_media{
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+.account .account_right .profile .add_media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/************************************
+    Add New Client Dashboard end
+************************************/
+
+/**************************************
+    Add New Lawyer Dashboard start
+**************************************/
+
+.account .account_right .profile .client_logo .client_iamge.add_neW_lawyer img{
+    height: 200px;
+}
+.lawyer_profile {
+	position: absolute;
+	margin-top: 48%;
+	margin-left: 78%;
+	z-index: 1;
+	float: right;
+}
+.account .account_right .profile .address_map{
+    overflow: hidden;
+    height: 295px;
+    margin-bottom: 45px;
+}
+.account .account_right .profile .address_map iframe{
+    width: 100%;
+    height: 100%;
+}
+.account .account_right .profile .card{
+    margin-bottom: 11px;
+    border-radius: 0px;
+}
+.account .account_right .profile .card:last-child{
+    margin-bottom: 35px;
+}
+.account .account_right .profile .card-header{
+    border-bottom: 0px;
+    padding: .91rem 1.40rem;
+}
+.account .account_right .profile .card-header .btn-link{
+    text-decoration: none !important;
+    width: 100%;
+    text-align: left;
+}
+.account .account_right .profile .card-header .btn-link .btn.focus, .btn:focus{
+    box-shadow: none !important;
+    color: #2b2d6f !important;
+}
+.account .account_right .profile .card-header .btn-link:hover{
+    color: #2b2d6f;
+}
+.account .account_right .profile .card-header h5{
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+}
+.account .account_right .profile .card-header h5 .btn-link{
+    color: #898989;
+}
+.account .account_right .profile .card-header h5 .btn-link .new_lawyer_acc{
+    float: right;
+    padding: 5px 0;
+}
+.account .account_right .profile .card-header .btn{
+    padding: 0px;
+}
+.account .account_right .profile .card-header .btn-link img.law_accroding_icon{
+    float: right;
+    filter: grayscale(100%);
+}
+.account .account_right .profile .card-header .btn-link:hover img.law_accroding_icon{
+    filter: grayscale(0%);
+}
+.show{
+    color: #2b2d6f !important;
+}
+.account .account_right .profile .card-header .btn-link .btn.focus, .btn:focus img.law_accroding_icon{
+    filter: grayscale(0%) !important;
+}
+
+/**************************************
+    Add New Lawyer Dashboard end
+**************************************/
+
+/****************************************
+    Add New Lawyer Firm Dashboard start
+****************************************/
+
+.lawyer_dashboard_outer{
+    overflow: hidden;
+    display: flex;
+}
+.account .account_right .profile .client_logo.lawyer_two_logo{
+    width: 48%;
+    margin-right: 15px;
+    float: left;
+}
+.account .account_right .profile .client_logo:last-child{
+    margin-right: 0px;
+}
+.lawyer_two_add {
+	position: absolute;
+	z-index: 1;
+	float: right;
+	right: 20%;
+	top: 175px;
+    margin: 0px;
+}
+.account .account_right .profile .image_gallery{
+    overflow: hidden;
+    border: 1px solid #e1e1e1;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.account .account_right .profile .image_gallery h5{
+    font-size: 16px;
+    font-family: 'Gotham-Black';
+    color: #898989;
+    padding: 31px 0px 31px 30px;
+    text-align: left;
+    float: left;
+}
+.account .account_right .profile .image_gallery img{
+    float: right;
+    padding: 21px 20px 22px 0px;
+}
+.account .account_right .profile .client_logo h5.lawyer_firm_dash_heding{
+        padding-bottom: 0px;
+    }
+
+/****************************************
+    Add New Lawyer Firm Dashboard end
+****************************************/
+
+.account .account_right .profile .current_lawyer_section{
+    overflow: hidden;
+}
+.account .account_right .profile .current_lawyer_section .current_lawyer_side_gap_first{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+.account .account_right .profile .current_lawyer_section .current_lawyer_side_gap{
+    padding-left: 0px;
+    padding-right: 20px;
+}
+.account .account_right .profile .current_lawyer_section .current_lawyer_side_gap_last{
+    padding-right: 15px;
+    padding-left: 0px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard{
+    border: 1px solid #ededed;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dash_image{
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dash_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dash_image img.add_img_sample{
+    width: auto;
+    height: auto;
+    left: 40%;
+    top: 34%;
+    position: absolute;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dashboard_des{
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dashboard_des h6{
+    font-size: 16px;
+    color: #2b2d6f;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 4px;
+    font-family: 'Gotham-Black';
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dashboard_des span{
+    padding-bottom: 16px;
+    font-size: 14px;
+    color: #9d9d9d;
+    text-transform: capitalize;
+    font-family: 'Gotham-Medium';
+    display: flex;
+    justify-content: center;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dashboard_des p.law_outer_yellow_border {
+	border: 2px solid #f89621;
+	font-size: 12px;
+	color: #f7941d;
+	font-family: 'Gotham-Medium';
+	margin: 0px auto !important;
+	display: block;
+	padding: 0px 6px;
+	width: 83%;
+	height: auto;
+	text-align: center;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard a {
+	text-align: center;
+	font-size: 14px;
+	color: #312c66;
+	font-family: 'Gotham-Black';
+	border-radius: 0px;
+	background: none;
+	padding: 0 0 21px 0px;
+	display: flex;
+	justify-content: center;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard a.small_device_add{
+    padding-bottom: 150px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard:hover a{
+    color: #ffa63a;
+    transition: 0.5s;
+}
+.medium_size_mobile{
+    display: none;
+}
+
+
+/************************************
+    Current Lawyer Dashboard start
+************************************/
+
+/************************************
+    Current Service Dashboard start
+************************************/
+
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .lawyer_dashboard_des h6{
+    font-size: 16px;
+    color: #2a2d71;
+    text-transform: capitalize;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .lawyer_dashboard_des p{
+    font-size: 12px;
+    color: #919191;
+    font-family: 'Gotham-Book';
+    display: flex;
+    justify-content: center;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .lawyer_dashboard_des p span{
+    font-family: 'Gotham-Medium';
+    color: #666666;
+    font-size: 12px;
+    padding-left: 4px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .lawyer_dashboard_des.no_bor_der {
+	border-bottom: 0px !important;
+	padding-bottom: 0px;
+	margin: 0 9px 0 9px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view{
+    overflow: hidden;
+    border-top: 1px solid #efefef;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul{
+    margin: 0px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li{
+    float: left;
+    border-right: 1px solid #efefef;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li:last-child{
+    border-right: 0px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li a{
+    padding: 13px 24.7px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li a.change_padd{
+    padding: 13px 32px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li:hover a{
+    background-color: #f7941d;
+    transition: 0.5s;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li a i{
+    color: #b3b3b3;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard.current_service_dashboard .quick_view ul li:hover a i{
+    color: #fff;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dash_image img.add_img_sample_current_service{
+    width: auto;
+    height: auto;
+    left: 40%;
+    top: 36%;
+    position: absolute;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard a.sample{
+    padding-bottom: 58px;
+}
+.account .account_right .profile .current_lawyer_section .LAWyer_dashboard .lawyer_dash_image.curr_ser{
+    height: 160px;
+}
+
+
+/************************************
+    Current Lawyer Dashboard end
+************************************/
+
+/**************************************
+    Current Package Dashboard start
+**************************************/
+
+.account .account_right .profile h5.current_package{
+    font-size: 16px;
+    color: #898989;
+    font-family: 'Gotham-Black';
+    padding-bottom: 22px;
+}
+.account .account_right .profile .card.card_modify{
+    border: 1px solid #2a2d72 !important;
+}
+.account .account_right .profile .upgarde_card{
+    padding: 0px;
+}
+.account .account_right .profile .card.card_modify_yellow{
+    border: 1px solid #f7931d;
+}
+.account .account_right .profile .card.card_modify_sky{
+    border: 1px solid #3cc393;
+}
+
+.account .account_right .profile .upgarde_card .upgarder_silver{
+    background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d72+0,41357a+100 */
+    background: #2a2d72; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d72 0%, #41357a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d72 0%,#41357a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d72 0%,#41357a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d72', endColorstr='#41357a',GradientType=1 ); /* IE6-9 */
+    cursor: pointer;
+}
+.account .account_right .profile .upgarde_card .upgarder_silver h5 button{
+    font-family: 'Gotham-Black';
+    font-size: 21px;
+    color: #fbfbfb !important;
+    padding: 10px 30px 10px 29px;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+}
+.account .account_right .profile .upgarde_card .upgarder_silver h5 button img{
+    float: right;
+    padding: 10px 0;
+    transform: rotate(180deg)
+    
+}
+.account .account_right .profile .upgarde_card .upgarder_silver h5 button.active img{
+    transform: rotate(0deg);
+}
+
+.account .account_right .profile a.upgarde_account_bg{
+    background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2a2d72+0,41357a+100 */
+    background: #2a2d72; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2a2d72 0%, #41357a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2a2d72 0%,#41357a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2a2d72 0%,#41357a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2d72', endColorstr='#41357a',GradientType=1 ); /* IE6-9 */
+    cursor: pointer;
+    display: flex;
+    padding: 16.5px 30px;
+    font-family: 'Gotham-Black';
+    font-size: 21px;
+    color: #fbfbfb !important;
+    padding: 14px 30px 16px 29px;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 0px;
+    max-height: 52px;
+}
+.account .account_right .profile a.upgarde_account_bg_yellow{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7931d+0,f7831e+100 */
+    background: #f7931d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #f7931d 0%, #f7831e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #f7931d 0%,#f7831e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #f7931d 0%,#f7831e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7931d', endColorstr='#f7831e',GradientType=1 ); /* IE6-9 */
+}
+.account .account_right .profile a.upgarde_account_bg_sky{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3cc393+0,3db9ac+100 */
+    background: #3cc393; /* Old browsers */
+    background: -moz-linear-gradient(left,  #3cc393 0%, #3db9ac 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #3cc393 0%,#3db9ac 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #3cc393 0%,#3db9ac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3cc393', endColorstr='#3db9ac',GradientType=1 ); /* IE6-9 */
+}
+.md-accordion .card .card-header a:not(.collapsed) .rotate-icon {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.account .account_right .profile a.upgarde_account_bg h5.arrow_right{
+    width: 100%;
+}
+.account .account_right .profile a.upgarde_account_bg h5.arrow_right i{
+    text-align: right;
+    font-size: 22px;
+    float: right;
+}
+.account .account_right .profile .upgarde_account_info{
+    padding: 25px 30px 30px 30px;
+}
+.account .account_right .profile .upgarde_account_info .acc_bottom_bor{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+.account .account_right .profile .upgarde_account_info .acc_bottom_bor .left_account_info{
+    float: left;
+    overflow: hidden;
+    width: 50%;
+}
+.account .account_right .profile .upgarde_account_info .acc_bottom_bor .left_account_info span{
+    font-size: 15px;
+    color: #656565;
+    font-family: 'Gotham-Book';
+    padding-left: 10px;
+}
+.account .account_right .profile .upgarde_account_info .acc_bottom_bor .left_account_info span.current_active_price{
+    color: #2a2d72;
+    font-family: 'Gotham-Medium';
+    font-size: 15px;
+}
+.account .account_right .profile h5.upgarde_pack_age{
+    padding-top: 38px;
+    padding-bottom: 22px;
+    font-size: 16px;
+    color: #898989;
+    font-family: 'Gotham-Black';
+}
+.account .account_right .profile button.Up_garde{
+    margin-left: 70%;
+    border: 1px solid #fbfbfb;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fbfbfb;
+    font-family: 'Gotham-Black';
+    padding: 7px 14px;
+    background: none;
+    margin-top: -10px;
+}
+.account .account_right .profile button.Up_garde.diamond_upgrade{
+    margin-left: 64%;
+}
+.account .account_right .profile .upgarde_account_info .acc_bottom_bor.no_border_bottom{
+    margin-bottom: 0px;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+/**************************************
+    Current Package Dashboard end
+**************************************/
+
+/*************************************
+    Current Client Dashboard start
+*************************************/
+
+.account .account_right .profile .add_client_right_fix{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.account .account_right .profile .add_client_right_fix .right_align{
+    float: right;
+}
+.account .account_right .profile .add_client_right_fix .right_align img{
+    float: left;
+    margin-right: 10px;
+}
+.account .account_right .profile .add_client_right_fix .right_align a{
+    font-size: 15px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    background: none;
+    padding: 0px;
+    border-radius: 0px;
+}
+.account .account_right .profile .add_client_list{
+    background-color: #fdf4ea;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 13px 15px;
+}
+.account .account_right .profile .add_client_list ul li {
+	float: left;
+	width: 29%;
+	margin-right: 20px;
+}
+.account .account_right .profile .add_client_list ul li:nth-child(2n){
+    width: 27%;
+}
+.account .account_right .profile .add_client_list ul li:last-child{
+    margin-right: 0px;
+    width: 37%;
+    cursor: pointer;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border{
+    border-right: 1px solid #ebe1d7;
+    overflow: hidden;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border.nobor{
+    border-right: 0px;
+    padding: 7px 0;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border.nobor.veh_p{
+    padding: 26px 0;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border .round_shape_client{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 16px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border .round_shape_client img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border h6{
+    font-size: 16px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    padding: 18px 0;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border h6.ve{
+    padding: 18px 0 18px 70px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border p{
+    font-size: 14px;
+    color: #f7941d;
+    font-family: 'Gotham-Medium';
+}
+.account .account_right .profile .add_client_list ul li .client_right_border p.veh{
+    padding-top: 20px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border p.client_phone{
+    color: #2b2d6f;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border p.client_phone.capi{
+    padding-bottom: 20px;
+    padding-top: 0px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border span {
+	font-size: 12px;
+	color: #5e5e5e;
+	font-family: 'Gotham-Book';
+	width: 60%;
+	float: left;
+	margin-right: 12px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul{
+    margin-bottom: 0px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li {
+	float: left;
+	margin-right: 10px;
+	width: 34px;
+	height: 34px;
+	border-radius: 100%;
+	border: 1px solid #f7941d;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li:last-child{
+    margin-right: 0px;
+    background-color: #f7941d;
+}
+
+.account .account_right .profile .add_client_list ul li .client_right_border ul li a{
+    background: none;
+    font-size: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li a i.trash{
+    color: #f7941d;
+    font-size: 16px;
+    padding: 8px 10px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li a i.angle_right{
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 14px;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li:hover{
+    background-color: #2b2d6f;
+    border: 1px solid #2b2d6f;
+    transition: 0.5s;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li:hover a i.trash{
+    color: #fff;
+}
+.account .account_right .profile .add_client_list ul li .client_right_border ul li:hover a i.angle_right{
+    color: #fff;
+}
+
+
+
+/*************************************
+    Current Client Dashboard end
+*************************************/
+
+/*************************************
+    Current Client Folder start
+*************************************/
+
+.account .account_right .profile .add_client_right_fix{
+    width: 100%;
+}
+.account .account_right .profile .add_client_right_fix .right_align a.service_status{
+    margin-right: 35px;
+    float: left;
+}
+.account .account_right .profile .add_client_right_fix .braed{
+    float: left;
+}
+.account .account_right .profile .add_client_right_fix .braed a{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    letter-spacing: 1px;
+    background: none;
+    padding: 0px;
+}
+.account .account_right .profile .add_client_right_fix .braed a i{
+    padding: 5px 17px 5px 0;
+    font-size: 19px;
+}
+.account .account_right .profile .client_folder_bg{
+    background-color: #fdf4ea;
+    overflow: hidden;
+    padding: 20px 25px 40px 25px;
+}
+.account .account_right .profile .client_folder_bg .top_align{
+    overflow: hidden;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #f1e6da;
+}
+.account .account_right .profile .client_folder_bg .top_align .client_folder_round{
+    width: 66px;
+    height: 66px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 17px;
+}
+.account .account_right .profile .client_folder_bg .top_align .client_folder_round img{
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.account .account_right .profile .client_folder_bg .top_align h6{
+    font-size: 21px;
+    color: #2b2d6f;
+    font-family: 'Gotham-Black';
+    padding: 20px 0 15px;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align{
+    float: right;
+    width: 65%;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align img.folder{
+    float: left;
+    padding-right: 10px;
+    padding-top: 7px;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align a.do{
+    float: left;
+    font-size: 13px;
+    font-family: 'Gotham-Black';
+    color: #2b2d6f;
+    background: none;
+    padding: 7px 0 0 0;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align a.do i{
+    padding-left: 10px;
+    font-size: 19px;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align a.delete{
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border: 1px solid #f7941d;
+    background: none;
+    float: right;
+    padding: 0px;
+    margin-left: 26px;
+}
+.account .account_right .profile .client_folder_bg .top_align .folder_right_align a.delete i{
+    padding: 8px 10px;
+    color: #f7941d;
+}
+.account .account_right .profile .client_folder_bg .releted{
+    padding-top: 40px;
+}
+.account .account_right .profile .client_folder_bg .releted h5{
+    font-family: 'Gotham-Black';
+    font-size: 21px;
+    color: #2b2d6f;
+    text-align: left;
+    padding-bottom: 26px;
+}
+.account .account_right .profile .client_folder_bg .releted .bg_white{
+    background-color: #fff;
+    border: 1px solid #e8dfd5;
+    box-shadow: 0px 0px 3px -1px #cbb7a0;
+    margin-right: 20px;
+}
+.account .account_right .profile .client_folder_bg .releted:last-child .bg_white{
+    margin-right: 0px;
+}
+.account .account_right .profile .client_folder_bg .releted .bg_white img{
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 73px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.account .account_right .profile .client_folder_bg .releted .bg_white p{
+    padding-bottom: 24px;
+    text-align: center;
+    color: #494949;
+    font-size: 14px;
+    font-family: 'Gotham-Black';
+}
+.account .account_right .profile .client_folder_bg .releted .left_no{
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.account .account_right .profile .client_folder_bg .releted .right_no{
+    padding: 0px;
+}
+
+/*************************************
+    Current Client Folder end
+*************************************/
+
+/*************************************
+    Current Client Details start
+*************************************/
+
+.account .account_right .profile .current_client_detail{
+    overflow: hidden;
+    padding-top: 46px;
+}
+.account .account_right .profile .current_client_detail ul{
+    
+}
+.account .account_right .profile .current_client_detail ul li{
+    border-bottom: 1px solid #f1e6da;
+    overflow: hidden;
+}
+.account .account_right .profile .current_client_detail ul li .left_detail{
+    overflow: hidden;
+    float: left;
+    width: 30%;
+}
+.account .account_right .profile .current_client_detail ul li .left_detail:first-child p{
+    padding-left: 15px;
+    font-size: 15px;
+    color: #5e5e5e;
+    font-family: 'Gotham-Medium';
+    padding-top: 15px;
+}
+.account .account_right .profile .current_client_detail ul li:nth-child(2n) .left_detail p{
+    padding-top: 22px;
+}
+.account .account_right .profile .current_client_detail ul li .left_detail:nth-child(odd) p{
+    padding-top: 15px;
+}
+.account .account_right .profile .current_client_detail ul li .right_detail{
+    overflow: hidden;
+    border-left: 1px solid #f1e6da;
+}
+.account .account_right .profile .current_client_detail ul li .right_detail p{
+    font-size: 14px;
+    color: #343434;
+    font-family: 'Gotham-Book';
+    line-height: 23px;
+    padding: 15px 0 27px 34px;
+}
+.account .account_right .profile .current_client_detail ul li:nth-child(2n) .right_detail p{
+    padding-top: 22px;
+}
+.account .account_right .profile .current_client_detail ul li .right_detail p a{
+    color: #f7941d;
+    background: none;
+    padding: 0px;
+    font-family: 'Gotham-Book';
+    font-size: 14px;
+    border-radius: 0px;
+}
+.account .account_right .profile .current_client_detail ul li .right_detail p.medium{
+    font-family: 'Gotham-Medium';
+    color: #2b2d6f;
+    font-size: 15px;
+}
+.account .account_right .profile .current_client_detail ul li .right_detail p.medium.num_ber{
+    color: #343434;
+    font-size: 15px;
+    padding-bottom: 22px;
+}
+
+
+/*************************************
+    Current Client Details end
+*************************************/
+
+/****************************************
+    Current Client Service Status start
+*****************************************/
+
+.account .account_right .profile .client_folder_bg .service_status_full{
+    overflow: hidden;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .service_status_progress{
+    margin-top: 50px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2c2d6e+0,312c67+100 */
+    background: #2c2d6e; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2c2d6e 0%, #312c67 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #2c2d6e 0%,#312c67 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #2c2d6e 0%,#312c67 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2d6e', endColorstr='#312c67',GradientType=1 ); /* IE6-9 */
+    margin-bottom: 37px;
+    overflow: hidden;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .service_status_progress h5{
+    padding: 14px 0 14px 18px;
+    text-align: left;
+    font-size: 21px;
+    color: #ffffff;
+    font-family: 'Gotham-Black';
+    display: inline-flex;
+    align-content: flex-start;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .service_status_progress a {
+	background: none;
+	border: 1px solid #f7941d;
+	border-radius: 2px;
+	font-size: 14px;
+	font-family: 'Gotham-Medium';
+	padding: 10px 13px;
+	text-align: center;
+	float: right;
+	margin: 5px 15px 0px 0;
+	text-transform: capitalize;
+}
+.account .account_right .profile .client_folder_bg .service_status_full h6{
+    font-size: 15px;
+    text-align: left;
+    display: inline-flex;
+    font-family: 'Gotham-Black';
+    padding-bottom: 20px;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .edit_bar{
+    float: right;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .edit_bar a img{
+    padding-right: 10px;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .edit_bar a{
+    font-size: 12px;
+    font-family: 'Gotham-Book';
+    color: #2c2d6e;
+    text-transform: capitalize;
+    background: none;
+    padding: 0px;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .progress_animated_bar{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .progress_animated_bar .prog_one{
+    border-radius: 12.5px;
+    height: 25px;
+    background-color: #f2e6d8;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .progress_animated_bar .progress-bar-animated{
+    background-color: #f7941d !important;
+    border-radius: 12.5px;
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-align: right;
+    padding-right: 10px;
+}
+.account .account_right .profile .client_folder_bg .service_status_full .progress_animated_bar .progress-bar-animated.non_bg{
+    background: none;
+}
+
+/****************** service status pop up page start *******************/
+
+.service_status_popup_age{
+    background-color: #fff;
+    box-shadow: -1px 2px 5px 0px rgba(132,132,132,0.7);
+    height: 500px;
+    min-width: 652px;
+}
+.service_status_popup_age .inner_service_status_form{
+    padding: 27px 27px 32px 30px;
+}
+.service_status_popup_age .inner_service_status_form h5{
+    font-size: 16px;
+    color: #312c66;
+    padding-bottom: 18px;
+    font-family: 'Gotham-Medium';
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 23px !important;
+}
+.service_status_popup_age .inner_service_status_form label{
+    padding-bottom: 18px;
+    font-size: 16px;
+    color: #838383;
+    font-family: 'Gotham-Black';
+    text-transform: capitalize;
+    display: flex;
+    margin-bottom: 0px;
+}
+.service_status_popup_age .inner_service_status_form input[type="text"]{
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    font-size: 15px;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 22px;
+    color: #bababa;
+    margin-bottom: 30px;
+}
+.service_status_popup_age .inner_service_status_form input[type="date"]{
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    font-size: 15px;
+    font-family: 'Gotham-Book';
+    text-transform: capitalize;
+    padding: 18px 22px;
+    color: #bababa;
+    margin-bottom: 30px;
+}
+.date_bottom{
+    margin-bottom: 0px !important;
+}
+.service_status_popup_age .inner_service_status_form input[type="submit"]{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-transform: capitalize;
+    background-color: #312c66;
+    border-radius: 2px;
+    padding: 13px 47px;
+    border: 0px;
+    float: left;
+}
+.service_status_popup_age .inner_service_status_form input[type="submit"]:hover {
+    background-color: #f7941d;
+    transition: 0.5s;
+}
+
+/****************** service status pop up page end *********************/
+
+/****************** Criminal Law Progress bar pop up page start *********************/
+
+.criminal_progressbar_edit{
+    overflow: hidden;
+    padding: 27px 28px 35px 30px;
+    width: 652px;
+    height: auto;
+}
+.criminal_progressbar_edit h5{
+    font-size: 16px;
+    color: #312c66;
+    padding-bottom: 32px;
+    font-family: 'Gotham-Medium';
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 21px !important;
+}
+.criminal_progressbar_edit h5.law_suit{
+    font-family: 'Gotham-Black';
+    font-size: 17px;
+    color: #2f2f2f;
+    padding-bottom: 18px;
+    border-bottom: 0px;
+    margin-bottom: 0px;
+}
+.criminal_progressbar_edit .scale{
+    position: relative;
+    margin-bottom: 27px;
+}
+.criminal_progressbar_edit .scale .progresspop{
+    background-color: #f2e6d8;
+    border-radius: 12.5px;
+    width: 100%;
+    height: 25px;
+}
+.criminal_progressbar_edit .scale::after{
+    position: absolute;
+    content: "";
+    bottom: -27px;
+    left: 6px;
+    background-image: url(../images/percantage.png);
+    background-repeat: no-repeat;
+    height: 27px;
+    background-size: 100%;
+    width: 586px;
+}
+.criminal_progressbar_edit input[type="submit"]{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-transform: capitalize;
+    background-color: #312c66;
+    border-radius: 2px;
+    padding: 13px 47px;
+    border: 0px;
+    float: left;
+    margin-top: 40px;
+}
+.criminal_progressbar_edit input[type="submit"]:hover{
+    background-color: #f7941d;
+    transition: 0.5s;
+}
+.criminal_progressbar_edit .prpgress_popup_edit{
+    background-color: #f7941d !important;
+    border-radius: 12.5px;
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Gotham-Black';
+    text-align: right;
+    padding-right: 10px;
+    background: none;
+}
+.criminal_progressbar_edit .pop_progress{
+    background-color: #f2e6d8;
+    height: 25px;
+    border-radius: 12.5px;
+}
+
+
+/****************** Criminal Law Progress bar pop up page end ***********************/
+
+
+
+/****************************************
+    Current Client Service Status end
+*****************************************/
+
+/***********************************
+    Law Firm Home Dashboard stsrt
+***********************************/
+
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg .lawyear_shapE.law_home_border img.dashboard_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_bg .lawyear_shapE.law_home_border{
+    border-bottom: 1px solid #e6e6e6;
+    height: 180px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail .lawyear_splist.lawfirm_busi{
+    margin-bottom: 50px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail.change_PAD{
+    padding-top: 20px;
+}
+.lawyear_listing .lawyear_listing_chose .list_of_lawyear .lawYear_Detail.change_PAD h5{
+    width: 84%;
+    margin: 0px auto !important;
+    min-height: 72px;
+}
+
+/***********************************
+    Law Firm Home Dashboard stsrt
+***********************************/
+
+/************************
+    Dashboard CSS end
+************************/
+
+
